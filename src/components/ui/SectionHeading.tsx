@@ -1,4 +1,5 @@
 import React from "react";
+import { Reveal } from "@/components/ui/Reveal";
 
 interface SectionHeadingProps {
   kicker?: string;
@@ -18,6 +19,7 @@ export function SectionHeading({
   const isCenter = alignment === "center";
 
   return (
+    <Reveal>
     <div
       className={`mb-12 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-3xl"}`}
     >
@@ -36,5 +38,6 @@ export function SectionHeading({
         </p>
       )}
     </div>
+    </Reveal>
   );
 }

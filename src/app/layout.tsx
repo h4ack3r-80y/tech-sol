@@ -1,10 +1,25 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { siteConfig } from "@/config/siteConfig";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -71,7 +86,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`dark scroll-smooth ${jakarta.variable} ${jetbrains.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script
           type="application/ld+json"

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/siteConfig";
@@ -10,10 +10,23 @@ import { Menu, X, ChevronDown, MessageSquare, ArrowRight } from "lucide-react";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 dark:bg-[#070B14]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header
+      className={`sticky top-0 z-50 bg-white/85 dark:bg-[#070B14]/85 backdrop-blur-xl border-b transition-all duration-300 ${
+        scrolled
+          ? "border-slate-200 dark:border-slate-700/60 shadow-lg shadow-slate-900/[0.06] dark:shadow-black/40"
+          : "border-slate-200/70 dark:border-slate-800/60 shadow-none"
+      }`}
+    >      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center gap-3 group">
@@ -61,7 +74,7 @@ export function Header() {
               </Link>
 
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 w-80 bg-white dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl p-3 z-50 animate-in fade-in zoom-in-95 duration-150">
+                <div className="dropdown-panel absolute top-full left-0 w-80 bg-white dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl p-3 z-50">
                   <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400 px-3 py-1.5 uppercase tracking-wider font-mono">
                     Core Capabilities
                   </div>

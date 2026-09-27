@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/siteConfig";
 import { Card3D } from "@/components/3d/Card3D";
+import { Reveal } from "@/components/ui/Reveal";
 import {
   ArrowRight,
   Database,
@@ -22,6 +23,8 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white pt-14 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-200 dark:border-slate-800 transition-colors">
       {/* Ambient Corporate Glow */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none" />
+      <div className="animate-float-slow absolute top-24 -left-24 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/[0.07] blur-[110px] rounded-full pointer-events-none" />
+      <div className="animate-float-slow absolute bottom-0 -right-24 w-[28rem] h-[28rem] bg-sky-500/10 dark:bg-sky-400/[0.06] blur-[120px] rounded-full pointer-events-none [animation-delay:2.5s]" />
       <div className="absolute inset-0 bg-corporate-grid opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -29,6 +32,7 @@ export function HeroSection() {
           {/* Left Column: Executive Value Proposition */}
           <div className="lg:col-span-6 space-y-6">
             {/* Title Section Brand Lockup & Kicker */}
+            <Reveal>
             <div className="flex items-center gap-3.5">
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-slate-900 p-0.5 border-2 border-blue-500/40 shadow-md flex-shrink-0 transition-transform hover:scale-105">
                 <Image
@@ -50,62 +54,78 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
+            </Reveal>
 
             {/* Executive Headline */}
+            <Reveal delay={90}>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
               Practical Digital Solutions Engineered for{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 dark:from-blue-400 dark:via-sky-400 dark:to-indigo-300 bg-clip-text text-transparent">
+              <span className="text-gradient-brand">
                 Real Business Scale
               </span>
             </h1>
+            </Reveal>
 
             {/* Subtitle */}
+            <Reveal delay={180}>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl font-normal">
               TechSol designs, builds, and deploys high-performance enterprise software, intelligent AI automations, robust cloud architectures, and specialized business management systems built for long-term operational resilience.
             </p>
+            </Reveal>
 
             {/* Action Buttons */}
+            <Reveal delay={260}>
             <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <Link
                 href="/request-a-quote"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm tracking-tight transition-all shadow-md shadow-blue-600/20 hover:scale-[1.01]"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm tracking-tight transition-all shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5"
               >
                 <span>Request a Quote</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
 
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/70 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all text-sm font-semibold shadow-sm"
+                className="group inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/70 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all text-sm font-semibold shadow-sm hover:-translate-y-0.5"
               >
                 <ShieldCheck className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 <span>Explore Verified Projects</span>
               </Link>
             </div>
+            </Reveal>
 
             {/* Executive Proof Metric Strip */}
             <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <Reveal delay={320} className="h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">99.9%</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Uptime Standard</div>
               </div>
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
+              </Reveal>
+              <Reveal delay={380} className="h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">PKR 15M+</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Ledgers Tracked</div>
               </div>
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
+              </Reveal>
+              <Reveal delay={440} className="h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">Offline-First</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Durable Engines</div>
               </div>
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
+              </Reveal>
+              <Reveal delay={500} className="h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
                 <div className="font-extrabold text-emerald-600 dark:text-emerald-400 text-base">Zero-Trust</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Security Standard</div>
               </div>
+              </Reveal>
             </div>
           </div>
 
           {/* Right Column: Clean Enterprise Capabilities Showcase */}
           <div className="lg:col-span-6 relative flex items-center justify-center">
+            <Reveal delay={200} y={36} className="w-full flex justify-center">
             <Card3D depth={10} className="w-full max-w-lg">
               <div className="w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-2xl overflow-hidden transition-colors">
                 {/* Console Window Top Bar */}
@@ -213,6 +233,7 @@ export function HeroSection() {
                 </div>
               </div>
             </Card3D>
+            </Reveal>
           </div>
         </div>
       </div>
