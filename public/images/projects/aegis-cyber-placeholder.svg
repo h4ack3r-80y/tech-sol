@@ -1,0 +1,33 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="12" fill="#080C14"/>
+  <rect x="1" y="1" width="798" height="498" rx="11" stroke="#1A2234" stroke-width="2"/>
+  <!-- Top bar -->
+  <rect x="20" y="20" width="760" height="40" rx="8" fill="#0E1626"/>
+  <circle cx="45" cy="40" r="6" fill="#EF4444"/>
+  <circle cx="65" cy="40" r="6" fill="#F59E0B"/>
+  <circle cx="85" cy="40" r="6" fill="#10B981"/>
+  <rect x="115" y="30" width="310" height="20" rx="4" fill="#17233B"/>
+  <text x="125" y="44" font-family="monospace" font-size="11" fill="#34D399">Aegis Zero-Trust Security Audit &amp; Hardening</text>
+  
+  <!-- Center Shield Icon -->
+  <rect x="20" y="75" width="760" height="405" rx="8" fill="#0E1626"/>
+  <circle cx="400" cy="200" r="64" fill="#131F35" stroke="#10B981" stroke-width="2"/>
+  <path d="M400 160L428 172V205C428 226 400 240 400 240C400 240 372 226 372 205V172L400 160Z" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M392 200L398 206L410 194" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Audit metric badges -->
+  <rect x="100" y="300" width="180" height="70" rx="8" fill="#131F35" stroke="#1E293B"/>
+  <text x="190" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">VULNERABILITIES</text>
+  <text x="190" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#EF4444">38 Resolved</text>
+
+  <rect x="310" y="300" width="180" height="70" rx="8" fill="#131F35" stroke="#1E293B"/>
+  <text x="400" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">ZERO-TRUST RBAC</text>
+  <text x="400" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#10B981">100% Enforced</text>
+
+  <rect x="520" y="300" width="180" height="70" rx="8" fill="#131F35" stroke="#1E293B"/>
+  <text x="610" y="328" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94A3B8">COMPLIANCE</text>
+  <text x="610" y="354" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#60A5FA">OWASP Top 10</text>
+
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#F8FAFC">Aegis Ethical Penetration Testing &amp; Infrastructure Defense</text>
+  <text x="400" y="442" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">End-to-End Encryption, Token Isolation, and Database Protection</text>
+</svg>
