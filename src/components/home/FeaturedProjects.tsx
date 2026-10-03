@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig } from "@/config/siteConfig";
+import { useContent } from "@/context/ContentContext";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CheckCircle2, ArrowRight, ShieldCheck, Cpu, Layers } from "lucide-react";
 
 export function FeaturedProjects() {
+  const { config } = useContent();
   const [selectedCategory, setSelectedCategory] = useState<string>("All Systems");
 
   const categories = [
@@ -18,10 +19,10 @@ export function FeaturedProjects() {
 
   const filteredProjects =
     selectedCategory === "All Systems"
-      ? siteConfig.projects
+      ? config.projects
       : selectedCategory === "Solar & Electronics"
-      ? siteConfig.projects.filter((p) => p.id === "ihs-pos-erp")
-      : siteConfig.projects.filter((p) => p.id === "ams-pos-erp");
+      ? config.projects.filter((p) => p.businessType.includes("Solar") || p.id === "ihs-pos-erp")
+      : config.projects.filter((p) => p.businessType.includes("Retail") || p.businessType.includes("Superstore") || p.id === "ams-pos-erp");
 
   return (
     <section className="py-20 lg:py-28 bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative transition-colors">
@@ -49,10 +50,10 @@ export function FeaturedProjects() {
           {categories.map((cat) => {
             const count =
               cat === "All Systems"
-                ? siteConfig.projects.length
+                ? config.projects.length
                 : cat === "Solar & Electronics"
-                ? siteConfig.projects.filter((p) => p.id === "ihs-pos-erp").length
-                : siteConfig.projects.filter((p) => p.id === "ams-pos-erp").length;
+                ? config.projects.filter((p) => p.businessType.includes("Solar") || p.id === "ihs-pos-erp").length
+                : config.projects.filter((p) => p.businessType.includes("Retail") || p.businessType.includes("Superstore") || p.id === "ams-pos-erp").length;
 
             const active = selectedCategory === cat;
 

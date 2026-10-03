@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/siteConfig";
-import { Reveal } from "@/components/ui/Reveal";
 import { ArrowRight, ArrowUpRight, Calendar, MessageSquare, Shield } from "lucide-react";
 
 export function FinalCta() {
@@ -11,7 +10,6 @@ export function FinalCta() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <Reveal>
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-xs font-mono font-semibold text-blue-700 dark:text-blue-400 uppercase tracking-wider mb-6 shadow-sm">
           <Shield className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
           <span>Ready to Build</span>
@@ -58,7 +56,6 @@ export function FinalCta() {
         <div className="mt-8 text-xs font-mono text-slate-500 dark:text-slate-400">
           Islamabad, Pakistan &bull; Phone &amp; WhatsApp: {siteConfig.business.contact.phoneDisplay}
         </div>
-        </Reveal>
       </div>
     </section>
   );

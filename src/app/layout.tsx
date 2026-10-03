@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { ContentProvider } from "@/context/ContentContext";
 import { siteConfig } from "@/config/siteConfig";
 
-const jakarta = Plus_Jakarta_Sans({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-heading",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const jetbrains = JetBrains_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
+  variable: "--font-sans",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -27,19 +28,23 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.business.name}`,
   },
   description:
-    "Shayan Ahmad Digital Solutions provides professional web, mobile, AI, automation, cybersecurity, cloud, POS/ERP, custom software, and SaaS solutions for businesses and organizations.",
+    "TechSol provides professional web, mobile, AI, automation, cybersecurity, cloud, POS/ERP, custom software, and SaaS solutions for businesses and organizations.",
   keywords: [
+    "TechSol",
     "Software Development",
     "POS ERP Development",
     "Custom Software Islamabad",
     "Web Development Pakistan",
     "Cybersecurity Assessments",
     "Business Automation",
+    "AI Application Development",
     "Cloud Solutions",
     "SaaS Architecture",
-    "Shayan Ahmad Digital Solutions",
   ],
-  authors: [{ name: siteConfig.business.founder }],
+  authors: [
+    { name: siteConfig.business.founder },
+    { name: siteConfig.business.coFounder },
+  ],
   creator: siteConfig.business.name,
   publisher: siteConfig.business.name,
   robots: {
@@ -71,11 +76,18 @@ export default function RootLayout({
     "@type": "Organization",
     name: siteConfig.business.name,
     description: siteConfig.business.coreMission,
-    founder: {
-      "@type": "Person",
-      name: siteConfig.business.founder,
-      jobTitle: siteConfig.business.founderTitle,
-    },
+    founders: [
+      {
+        "@type": "Person",
+        name: siteConfig.business.founder,
+        jobTitle: siteConfig.business.founderTitle,
+      },
+      {
+        "@type": "Person",
+        name: siteConfig.business.coFounder,
+        jobTitle: siteConfig.business.coFounderTitle,
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.business.location.city,
@@ -88,7 +100,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark scroll-smooth ${jakarta.variable} ${jetbrains.variable}`}
+      className={`dark scroll-smooth ${inter.variable} ${plusJakarta.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -117,12 +129,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white selection:bg-blue-600 selection:text-white transition-colors duration-200">
-        <ThemeProvider>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </ThemeProvider>
+        <ContentProvider>
+          <ThemeProvider>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <WhatsAppButton />
+          </ThemeProvider>
+        </ContentProvider>
       </body>
     </html>
   );

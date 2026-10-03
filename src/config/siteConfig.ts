@@ -41,16 +41,87 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface FounderItem {
+  id: string;
+  name: string;
+  role: string;
+  secondaryRole?: string;
+  displayTitle: string;
+  roleBadges: string[];
+  image: string;
+  bio: string;
+  quoteMessage: string;
+  expertise: string[];
+  focusPillar: "Cybersecurity & Leadership" | "AI & Intelligent Systems";
+}
+
+export interface LedgerProConfig {
+  name: string;
+  url: string;
+  registerUrl: string;
+  tagline: string;
+  badge: string;
+  isPaid: boolean;
+  shortDescription: string;
+  fullDescription: string;
+  features: string[];
+  ctaText: string;
+  ctaSubtext: string;
+  enabled: boolean;
+}
+
 export const siteConfig = {
   business: {
     name: "TechSol",
     legalName: "TechSol",
     founder: "Shayan Ahmad",
-    founderTitle: "Founder & Technology Consultant",
+    founderTitle: "Founder & CEO | Head of Cybersecurity",
+    coFounder: "Muhammad Saqib",
+    coFounderTitle: "Co-Founder | AI Solutions Architect",
+    founders: [
+      {
+        id: "shayan-ahmad",
+        name: "Shayan Ahmad",
+        role: "Founder & CEO",
+        secondaryRole: "Head of Cybersecurity",
+        displayTitle: "Founder & CEO • Head of Cybersecurity",
+        roleBadges: ["Founder & CEO", "Head of Cybersecurity"],
+        image: "/images/founder-1.jpg",
+        bio: "Shayan Ahmad spearheads TechSol's strategic vision and cybersecurity practice. With specialized expertise in defensive engineering, vulnerability assessment, and secure enterprise architecture, he ensures every software system and client infrastructure is fortified against modern threats from day one.",
+        quoteMessage:
+          "Technology must solve core business bottlenecks while standing bulletproof against evolving cyber threats. At TechSol, we bridge engineering speed with uncompromising cybersecurity—giving our clients reliable digital foundations they can scale with complete confidence.",
+        expertise: [
+          "Defensive Cybersecurity & Hardening",
+          "Vulnerability Assessments & Penetration Testing",
+          "Enterprise Digital Architecture",
+          "Strategic Technical Advisory",
+        ],
+        focusPillar: "Cybersecurity & Leadership",
+      },
+      {
+        id: "muhammad-saqib",
+        name: "Muhammad Saqib",
+        role: "Co-Founder",
+        secondaryRole: "AI Solutions Architect",
+        displayTitle: "Co-Founder • AI Solutions Architect",
+        roleBadges: ["Co-Founder", "AI Solutions Architect"],
+        image: "/images/founder-2.jpg",
+        bio: "Muhammad Saqib leads artificial intelligence engineering and intelligent software systems at TechSol. Specializing in practical AI application development, neural integrations, and high-performance business applications, he converts manual operational friction into agile, automated digital engines.",
+        quoteMessage:
+          "AI is not a buzzword—it is the operational muscle of the modern enterprise. We build intelligent, custom-engineered software that eliminates manual overhead, accelerates operational velocity, and grants our clients a decisive market advantage.",
+        expertise: [
+          "AI Application Development & LLM Integrations",
+          "Intelligent Workflow Automation",
+          "Custom ERP & High-Throughput Software",
+          "Scalable Cloud & API Infrastructure",
+        ],
+        focusPillar: "AI & Intelligent Systems",
+      },
+    ] as FounderItem[],
     tagline: "Technology • Intelligence • Innovation",
     subTagline: "Building a Smarter Digital Future",
     coreMission:
-      "TechSol helps businesses turn complex problems into reliable, high-performance digital solutions. Founded by Shayan Ahmad, we specialize in modern software engineering, AI automation, cybersecurity, cloud infrastructure, and intelligent business systems.",
+      "TechSol helps businesses turn complex problems into reliable, high-performance digital solutions. We specialize in modern software engineering, AI automation, cybersecurity, cloud infrastructure, and intelligent business systems.",
     location: {
       city: "Islamabad",
       country: "Pakistan",
@@ -64,7 +135,7 @@ export const siteConfig = {
       whatsappDisplay: "+92 310 4270426",
       whatsappRaw: "923104270426",
       whatsappMessage:
-        "Hello TechSol, I would like to discuss a project with Shayan Ahmad.",
+        "Hello TechSol, I would like to discuss a project with the founders.",
       // Domain & email are kept configurable as real domain is yet to be registered
       domain: "", // Configurable domain placeholder
       emailPlaceholder: "hello@yourdomain.com",
@@ -84,8 +155,34 @@ export const siteConfig = {
       },
     },
     founderBio:
-      "Shayan Ahmad is the founder and principal technology consultant at TechSol, dedicated to engineering practical digital architectures, robust enterprise systems, and intelligent automations for businesses globally.",
+      "Led by Shayan Ahmad (Founder & CEO, Head of Cybersecurity) and Muhammad Saqib (Co-Founder, AI Solutions Architect), TechSol pairs defensive security engineering with cutting-edge AI and enterprise software development.",
   },
+
+  ledgerPro: {
+    name: "LedgerPro Solution",
+    url: "https://www.ledgerprosolution.com",
+    registerUrl: "https://www.ledgerprosolution.com",
+    tagline: "Online Cloud Business Registration & Comprehensive Management System",
+    badge: "⭐ Official Flagship SaaS • Paid Service",
+    isPaid: true,
+    shortDescription:
+      "Our premier online business management cloud platform. Register your business online, automate multi-counter billing, Khata ledgers, stock valuation, and tax-ready accounts from anywhere.",
+    fullDescription:
+      "LedgerPro Solution (www.ledgerprosolution.com) is TechSol's dedicated online cloud software engineered for retail businesses, wholesalers, distributors, and modern enterprises. Users register their business in minutes, manage digital Khata ledgers, issue fast thermal/A4 invoices, track multi-branch inventory, and access real-time financial reporting securely on any phone, tablet, or PC.",
+    features: [
+      "Online Business Registration & Quick Cloud Setup",
+      "Digital Khata (Customer & Supplier Balances)",
+      "High-Speed Counter Billing & Thermal Invoicing",
+      "Real-Time Weighted-Average Stock Valuation",
+      "Multi-Branch & Multi-User Staff Permissions",
+      "Automated Net Margin & Tax-Ready Financials",
+      "100% Mobile & Desktop Responsive Cloud UX",
+      "Daily Automated Cloud Backups & Zero-Loss Guarantee",
+    ],
+    ctaText: "Launch LedgerPro (www.ledgerprosolution.com)",
+    ctaSubtext: "Paid Online SaaS • Instant Setup & Live Platform",
+    enabled: true,
+  } as LedgerProConfig,
 
   navigation: [
     { name: "Home", href: "/" },
@@ -620,3 +717,6 @@ export const siteConfig = {
       "For security and compliance, bank account details and payment instructions are shared exclusively through formal invoices and authorized communication channels. We never request passwords, OTPs, or private financial credentials.",
   },
 };
+
+export type SiteConfig = typeof siteConfig;
+

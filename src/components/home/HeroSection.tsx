@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/siteConfig";
 import { Card3D } from "@/components/3d/Card3D";
-import { Reveal } from "@/components/ui/Reveal";
 import {
   ArrowRight,
   Database,
@@ -16,6 +15,11 @@ import {
   Terminal,
   Zap,
   Lock,
+  Globe,
+  Sparkles,
+  Cloud,
+  Smartphone,
+  Code2,
 } from "lucide-react";
 
 export function HeroSection() {
@@ -23,8 +27,6 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white pt-14 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-200 dark:border-slate-800 transition-colors">
       {/* Ambient Corporate Glow */}
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none" />
-      <div className="animate-float-slow absolute top-24 -left-24 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/[0.07] blur-[110px] rounded-full pointer-events-none" />
-      <div className="animate-float-slow absolute bottom-0 -right-24 w-[28rem] h-[28rem] bg-sky-500/10 dark:bg-sky-400/[0.06] blur-[120px] rounded-full pointer-events-none [animation-delay:2.5s]" />
       <div className="absolute inset-0 bg-corporate-grid opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -32,7 +34,6 @@ export function HeroSection() {
           {/* Left Column: Executive Value Proposition */}
           <div className="lg:col-span-6 space-y-6">
             {/* Title Section Brand Lockup & Kicker */}
-            <Reveal>
             <div className="flex items-center gap-3.5">
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-slate-900 p-0.5 border-2 border-blue-500/40 shadow-md flex-shrink-0 transition-transform hover:scale-105">
                 <Image
@@ -49,83 +50,108 @@ export function HeroSection() {
                   <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-pulse" />
                   <span>Technology &bull; Intelligence &bull; Innovation</span>
                 </div>
-                <div className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-medium pl-1">
-                  TechSol &bull; Founded by Shayan Ahmad
-                </div>
               </div>
             </div>
-            </Reveal>
 
             {/* Executive Headline */}
-            <Reveal delay={90}>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
               Practical Digital Solutions Engineered for{" "}
-              <span className="text-gradient-brand">
+              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-600 dark:from-blue-400 dark:via-sky-400 dark:to-indigo-300 bg-clip-text text-transparent">
                 Real Business Scale
               </span>
             </h1>
-            </Reveal>
 
             {/* Subtitle */}
-            <Reveal delay={180}>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl font-normal">
               TechSol designs, builds, and deploys high-performance enterprise software, intelligent AI automations, robust cloud architectures, and specialized business management systems built for long-term operational resilience.
             </p>
-            </Reveal>
 
             {/* Action Buttons */}
-            <Reveal delay={260}>
             <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <Link
                 href="/request-a-quote"
-                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm tracking-tight transition-all shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm tracking-tight transition-all shadow-md shadow-blue-600/20 hover:scale-[1.01]"
               >
                 <span>Request a Quote</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
 
               <Link
                 href="/projects"
-                className="group inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/70 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all text-sm font-semibold shadow-sm hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/70 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all text-sm font-semibold shadow-sm"
               >
                 <ShieldCheck className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 <span>Explore Verified Projects</span>
               </Link>
             </div>
-            </Reveal>
+
+            {/* Dynamic Upper Horizontal Moving Services Line (Right to Left) */}
+            <div className="pt-2">
+              <div className="relative overflow-hidden py-2.5 border-y border-slate-200/80 dark:border-slate-800/80 bg-white/40 dark:bg-[#0D1527]/50 backdrop-blur-md rounded-xl shadow-xs">
+                {/* Left & Right Smooth Gradient Masks */}
+                <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-slate-50 dark:from-[#070B14] to-transparent" />
+                <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-slate-50 dark:from-[#070B14] to-transparent" />
+
+                {/* Marquee Track moving dynamically from Right to Left */}
+                <div className="animate-marquee-rtl flex items-center gap-2.5">
+                  {[
+                    { label: "Cybersecurity & Hardening", icon: ShieldCheck },
+                    { label: "AI Automation & LLMs", icon: Cpu },
+                    { label: "Custom POS & ERP", icon: Code2 },
+                    { label: "Full-Stack Web Engineering", icon: Globe },
+                    { label: "Vulnerability Assessments", icon: Lock },
+                    { label: "Cloud Infrastructure", icon: Cloud },
+                    { label: "Intelligent Workflows", icon: Sparkles },
+                    { label: "Mobile Applications", icon: Smartphone },
+                    { label: "SaaS Product Engineering", icon: Terminal },
+                    { label: "Cybersecurity & Hardening", icon: ShieldCheck },
+                    { label: "AI Automation & LLMs", icon: Cpu },
+                    { label: "Custom POS & ERP", icon: Code2 },
+                    { label: "Full-Stack Web Engineering", icon: Globe },
+                    { label: "Vulnerability Assessments", icon: Lock },
+                    { label: "Cloud Infrastructure", icon: Cloud },
+                    { label: "Intelligent Workflows", icon: Sparkles },
+                    { label: "Mobile Applications", icon: Smartphone },
+                    { label: "SaaS Product Engineering", icon: Terminal },
+                  ].map((item, idx) => {
+                    const Icon = item.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs whitespace-nowrap hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        <Icon className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                        <span>{item.label}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
 
             {/* Executive Proof Metric Strip */}
             <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-              <Reveal delay={320} className="h-full">
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">99.9%</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Uptime Standard</div>
               </div>
-              </Reveal>
-              <Reveal delay={380} className="h-full">
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">PKR 15M+</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Ledgers Tracked</div>
               </div>
-              </Reveal>
-              <Reveal delay={440} className="h-full">
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">Offline-First</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Durable Engines</div>
               </div>
-              </Reveal>
-              <Reveal delay={500} className="h-full">
-              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-blue-300 dark:hover:border-blue-800 transition-all h-full">
+              <div className="p-3 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div className="font-extrabold text-emerald-600 dark:text-emerald-400 text-base">Zero-Trust</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Security Standard</div>
               </div>
-              </Reveal>
             </div>
           </div>
 
           {/* Right Column: Clean Enterprise Capabilities Showcase */}
           <div className="lg:col-span-6 relative flex items-center justify-center">
-            <Reveal delay={200} y={36} className="w-full flex justify-center">
             <Card3D depth={10} className="w-full max-w-lg">
               <div className="w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-2xl overflow-hidden transition-colors">
                 {/* Console Window Top Bar */}
@@ -233,7 +259,65 @@ export function HeroSection() {
                 </div>
               </div>
             </Card3D>
-            </Reveal>
+          </div>
+        </div>
+
+        {/* Full-Width Dynamic Animated Services Strip (Right to Left) */}
+        <div className="mt-14 pt-8 border-t border-slate-200/80 dark:border-slate-800/80 relative">
+          <div className="flex items-center justify-between mb-3 px-1">
+            <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase text-slate-500 dark:text-slate-400">
+              <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-ping" />
+              <span>Core Services &amp; Engineering Matrix</span>
+            </div>
+            <span className="text-[11px] font-mono text-blue-600 dark:text-blue-400 font-medium hidden sm:inline-block">
+              Continuous Delivery &bull; Zero-Downtime Architecture
+            </span>
+          </div>
+
+          <div className="relative overflow-hidden py-3 border-y border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0D1527]/60 backdrop-blur-md rounded-2xl shadow-xs">
+            {/* Left & Right Smooth Fade Masks */}
+            <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-slate-50 dark:from-[#070B14] to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-slate-50 dark:from-[#070B14] to-transparent" />
+
+            {/* Marquee Track moving dynamically from Right to Left */}
+            <div className="animate-marquee-rtl flex items-center gap-3">
+              {[
+                { label: "Defensive Cybersecurity & Hardening", icon: ShieldCheck, tag: "SECURE" },
+                { label: "AI Application Development & LLMs", icon: Cpu, tag: "AUTOMATE" },
+                { label: "Custom POS & Offline-First ERP", icon: Code2, tag: "BUILD" },
+                { label: "Vulnerability Assessments & Pen-Testing", icon: Lock, tag: "SECURE" },
+                { label: "Full-Stack Web Engineering", icon: Globe, tag: "BUILD" },
+                { label: "Intelligent Workflow Automation", icon: Sparkles, tag: "AUTOMATE" },
+                { label: "Cloud Infrastructure & Zero-Trust", icon: Cloud, tag: "SCALE" },
+                { label: "High-Throughput Software Architecture", icon: Terminal, tag: "BUILD" },
+                { label: "Mobile Apps (iOS & Android)", icon: Smartphone, tag: "BUILD" },
+                { label: "Database Scaling & Ledger Engines", icon: Database, tag: "SCALE" },
+                { label: "Defensive Cybersecurity & Hardening", icon: ShieldCheck, tag: "SECURE" },
+                { label: "AI Application Development & LLMs", icon: Cpu, tag: "AUTOMATE" },
+                { label: "Custom POS & Offline-First ERP", icon: Code2, tag: "BUILD" },
+                { label: "Vulnerability Assessments & Pen-Testing", icon: Lock, tag: "SECURE" },
+                { label: "Full-Stack Web Engineering", icon: Globe, tag: "BUILD" },
+                { label: "Intelligent Workflow Automation", icon: Sparkles, tag: "AUTOMATE" },
+                { label: "Cloud Infrastructure & Zero-Trust", icon: Cloud, tag: "SCALE" },
+                { label: "High-Throughput Software Architecture", icon: Terminal, tag: "BUILD" },
+                { label: "Mobile Apps (iOS & Android)", icon: Smartphone, tag: "BUILD" },
+                { label: "Database Scaling & Ledger Engines", icon: Database, tag: "SCALE" },
+              ].map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/70 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs whitespace-nowrap hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-default"
+                  >
+                    <Icon className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                    <span>{item.label}</span>
+                    <span className="text-[10px] font-mono font-bold uppercase px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/70 text-blue-600 dark:text-blue-400 border border-blue-200/50 dark:border-blue-800/50">
+                      {item.tag}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

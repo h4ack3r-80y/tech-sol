@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig } from "@/config/siteConfig";
-import { Phone, MessageSquare, MapPin, ArrowRight } from "lucide-react";
+import { useContent } from "@/context/ContentContext";
+import { Phone, MessageSquare, MapPin, ArrowRight, ExternalLink, Sparkles, Shield } from "lucide-react";
 
 export function Footer() {
+  const { config, isAdminAuthenticated } = useContent();
   const currentYear = new Date().getFullYear();
+
+  const ledgerProUrl = config.ledgerPro?.url || "https://www.ledgerprosolution.com";
 
   return (
     <footer className="bg-[#070B14] text-slate-400 border-t border-slate-800">
@@ -16,7 +21,7 @@ export function Footer() {
             <div className="w-11 h-11 relative flex-shrink-0 bg-white p-0.5 rounded-full border border-blue-500/30 flex items-center justify-center overflow-hidden shadow-sm">
               <Image
                 src="/images/official-logo.png"
-                alt="Shayan Ahmad Digital Solutions"
+                alt="TechSol Official Logo"
                 width={44}
                 height={44}
                 className="w-full h-full object-contain rounded-full"
@@ -24,18 +29,18 @@ export function Footer() {
             </div>
             <div>
               <div className="text-white font-bold text-lg tracking-tight">
-                {siteConfig.business.name}
+                {config.business.name}
               </div>
               <div className="text-blue-400 text-xs font-mono font-medium tracking-wider uppercase">
-                {siteConfig.business.tagline}
+                {config.business.tagline}
               </div>
             </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href={`https://wa.me/${siteConfig.business.contact.whatsappRaw}?text=${encodeURIComponent(
-                siteConfig.business.contact.whatsappMessage
+              href={`https://wa.me/${config.business.contact.whatsappRaw}?text=${encodeURIComponent(
+                config.business.contact.whatsappMessage
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -64,37 +69,36 @@ export function Footer() {
               Technology Solutions
             </h3>
             <p className="text-sm text-neutral-400 leading-relaxed max-w-md font-normal">
-              {siteConfig.business.coreMission}
+              {config.business.coreMission}
             </p>
             <div className="pt-2 text-xs font-mono text-neutral-500">
-              {siteConfig.business.location.scopeNote}
+              {config.business.location.scopeNote}
             </div>
 
-            {(siteConfig.business.toggles.showFiverr ||
-              siteConfig.business.toggles.showUpwork) && (
-              <div className="pt-3 flex items-center gap-3">
-                {siteConfig.business.toggles.showFiverr && (
-                  <a
-                    href={siteConfig.business.toggles.fiverrUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:bg-white/10"
-                  >
-                    Find Us on Fiverr
-                  </a>
-                )}
-                {siteConfig.business.toggles.showUpwork && (
-                  <a
-                    href={siteConfig.business.toggles.upworkUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:bg-white/10"
-                  >
-                    Find Us on Upwork
-                  </a>
-                )}
+            {/* Flagship SaaS Spotlight Box */}
+            <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/40 transition-colors max-w-md space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-white flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+                  <span>Flagship Cloud Platform</span>
+                </span>
+                <span className="text-[10px] font-mono font-semibold uppercase px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">
+                  Cloud SaaS
+                </span>
               </div>
-            )}
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Register your business online and manage multi-branch Khata ledgers with LedgerPro Solution.
+              </p>
+              <a
+                href={ledgerProUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                <span>www.ledgerprosolution.com</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
           </div>
 
           {/* Col 2: Services */}
@@ -103,7 +107,7 @@ export function Footer() {
               Services
             </h4>
             <ul className="space-y-2.5 text-sm text-neutral-400">
-              {siteConfig.services.slice(0, 5).map((service) => (
+              {config.services.slice(0, 5).map((service) => (
                 <li key={service.id}>
                   <Link
                     href={`/services/${service.slug}`}
@@ -118,7 +122,7 @@ export function Footer() {
                   href="/services"
                   className="text-blue-400 hover:text-blue-300 font-semibold text-xs flex items-center gap-1 mt-1"
                 >
-                  All 8 Services &rarr;
+                  All Services &rarr;
                 </Link>
               </li>
             </ul>
@@ -127,9 +131,20 @@ export function Footer() {
           {/* Col 3: Company & Solutions */}
           <div>
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4 font-mono">
-              Company
+              Company &amp; SaaS
             </h4>
             <ul className="space-y-2.5 text-sm text-neutral-400">
+              <li>
+                <a
+                  href={ledgerProUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1.5 transition-colors"
+                >
+                  <span>LedgerPro Cloud SaaS</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
               <li>
                 <Link href="/about" className="hover:text-white transition-colors">
                   About Us
@@ -152,14 +167,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/book-a-consultation"
-                  className="hover:text-white transition-colors"
-                >
-                  Book a Consultation
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/request-a-quote"
                   className="hover:text-white transition-colors"
                 >
@@ -178,42 +185,42 @@ export function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  {siteConfig.business.location.city},{" "}
-                  {siteConfig.business.location.country}
+                  {config.business.location.city},{" "}
+                  {config.business.location.country}
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 <a
-                  href={`tel:${siteConfig.business.contact.phoneRaw}`}
-                  className="hover:text-white transition-colors font-medium"
+                  href={`tel:${config.business.contact.phoneRaw}`}
+                  className="hover:text-white transition-colors font-medium font-mono text-xs"
                 >
-                  {siteConfig.business.contact.phoneDisplay}
+                  {config.business.contact.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <MessageSquare className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <a
-                  href={`https://wa.me/${siteConfig.business.contact.whatsappRaw}?text=${encodeURIComponent(
-                    siteConfig.business.contact.whatsappMessage
+                  href={`https://wa.me/${config.business.contact.whatsappRaw}?text=${encodeURIComponent(
+                    config.business.contact.whatsappMessage
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors font-medium"
+                  className="hover:text-white transition-colors font-medium font-mono text-xs"
                 >
-                  WhatsApp: {siteConfig.business.contact.whatsappDisplay}
+                  WhatsApp: {config.business.contact.whatsappDisplay}
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom copyright & legal */}
+        {/* Bottom copyright, legal & Admin link */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
           <div>
-            &copy; {currentYear} {siteConfig.business.legalName}. All rights reserved.
+            &copy; {currentYear} {config.business.legalName}. All rights reserved.
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <Link
               href="/privacy-policy"
               className="hover:text-blue-400 transition-colors"
@@ -226,6 +233,14 @@ export function Footer() {
               className="hover:text-blue-400 transition-colors"
             >
               Terms &amp; Conditions
+            </Link>
+            <span className="text-slate-700">|</span>
+            <Link
+              href="/admin"
+              className="inline-flex items-center gap-1 hover:text-blue-400 transition-colors text-slate-400"
+            >
+              <Shield className={`w-3.5 h-3.5 ${isAdminAuthenticated ? "text-emerald-500" : ""}`} />
+              <span>Admin Portal {isAdminAuthenticated ? "(Logged In)" : ""}</span>
             </Link>
           </div>
         </div>

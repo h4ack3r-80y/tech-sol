@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { siteConfig } from "@/config/siteConfig";
+import { useContent } from "@/context/ContentContext";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ChevronDown } from "lucide-react";
 
 export function FaqSection() {
+  const { config } = useContent();
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   const toggle = (idx: number) => {
@@ -23,7 +24,7 @@ export function FaqSection() {
         />
 
         <div className="mt-8 space-y-3.5">
-          {siteConfig.faqs.map((faq, idx) => {
+          {config.faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div

@@ -1,6 +1,7 @@
 import React from "react";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TrustSection } from "@/components/home/TrustSection";
+import { LedgerProShowcase } from "@/components/home/LedgerProShowcase";
 import { SolutionsMatrix } from "@/components/home/SolutionsMatrix";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
@@ -16,6 +17,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustSection />
+      <LedgerProShowcase />
       <SolutionsMatrix />
       <ServicesGrid />
       <FeaturedProjects />

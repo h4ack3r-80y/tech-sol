@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { siteConfig } from "@/config/siteConfig";
+import { useContent } from "@/context/ContentContext";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   Store,
@@ -16,6 +18,8 @@ import {
 } from "lucide-react";
 
 export function ServicesGrid() {
+  const { config } = useContent();
+
   const serviceIcons: Record<string, React.ElementType> = {
     "pos-erp-development": Store,
     "custom-software": Terminal,
@@ -46,7 +50,7 @@ export function ServicesGrid() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {siteConfig.services.map((service) => {
+          {config.services.map((service) => {
             const Icon = serviceIcons[service.id] || Terminal;
 
             return (
