@@ -97,11 +97,11 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
           {/* Left Column: Executive Value Proposition */}
-          <div className="max-w-3xl mx-auto w-full space-y-6 text-center">
+          <div className="max-w-3xl mx-auto lg:mx-0 w-full space-y-6 text-center lg:text-left">
             {/* Title Section Brand Lockup & Kicker */}
-            <div className="flex items-center justify-center gap-3.5">
+            <div className="flex items-center justify-center lg:justify-start gap-3.5">
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-slate-900 p-0.5 border-2 border-blue-500/40 shadow-[0_0_24px_rgba(46,155,255,0.5)] flex-shrink-0 transition-transform hover:scale-105">
                 <Image
                   src="/images/techsol-symbol.png"
@@ -129,12 +129,12 @@ export function HeroSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               TechSol designs, builds, and deploys high-performance enterprise software, intelligent AI automations, robust cloud architectures, and specialized business management systems built for long-term operational resilience.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-1">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-1">
               <Link
                 href="/request-a-quote"
                 className="ts-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-white font-semibold text-sm tracking-tight"
@@ -153,7 +153,7 @@ export function HeroSection() {
             </div>
 
             {/* Executive Proof Metric Strip */}
-            <div className="pt-6 border-t border-slate-200 dark:border-[#1C2C4E]/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs max-w-2xl mx-auto">
+            <div className="pt-6 border-t border-slate-200 dark:border-[#1C2C4E]/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs max-w-2xl mx-auto lg:mx-0">
               <div className="p-3 rounded-xl bg-white dark:bg-[#0A1120]/60 border border-slate-200 dark:border-[#1C2C4E] shadow-sm hover:border-[#2E9BFF]/40 hover:shadow-[0_8px_24px_-8px_rgba(46,155,255,0.4)] transition-all duration-300">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">99.9%</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Uptime Standard</div>
@@ -170,6 +170,33 @@ export function HeroSection() {
                 <div className="font-extrabold text-emerald-600 dark:text-emerald-400 text-base">Zero-Trust</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Security Standard</div>
               </div>
+            </div>
+          </div>
+
+          {/* Right Column: Premium AI Robot Visual */}
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+            {/* Ambient glow behind robot */}
+            <div className="absolute inset-8 bg-[#2E9BFF]/25 dark:bg-[#2E9BFF]/30 blur-[90px] rounded-full pointer-events-none" aria-hidden="true" />
+            <div className="relative rounded-[2rem] overflow-hidden border border-blue-500/30 dark:border-blue-400/30 shadow-[0_0_90px_-18px_rgba(46,155,255,0.6)] animate-float">
+              <Image
+                src="/images/techsol-robot-hero.webp"
+                alt="TechSol premium AI robot — deep navy and electric blue"
+                width={1024}
+                height={1024}
+                className="w-full h-auto object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#04070E]/50 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
+            </div>
+
+            {/* Floating premium glass chips */}
+            <div className="absolute -left-3 sm:-left-6 top-10 inline-flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#0D1830]/80 backdrop-blur-md border border-slate-200 dark:border-blue-500/30 shadow-lg">
+              <Cpu className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <span className="text-xs font-bold text-slate-800 dark:text-white">AI Automation</span>
+            </div>
+            <div className="absolute -right-2 sm:-right-5 bottom-12 inline-flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#0D1830]/80 backdrop-blur-md border border-slate-200 dark:border-blue-500/30 shadow-lg">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="text-xs font-bold text-slate-800 dark:text-white">Zero-Trust Security</span>
             </div>
           </div>
 
