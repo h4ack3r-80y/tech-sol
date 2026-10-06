@@ -21,60 +21,6 @@ import {
   Code2,
 } from "lucide-react";
 
-/* Animated flowing tech lines — dashes stream rightward like live data flow */
-function FlowingLines() {
-  return (
-    <svg
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      viewBox="0 0 800 500"
-      fill="none"
-      preserveAspectRatio="xMidYMid slice"
-      aria-hidden="true"
-    >
-      <g style={{ mixBlendMode: "screen" }}>
-        <path
-          d="M-40 110 C 180 50, 400 170, 840 80"
-          stroke="#38E1FF"
-          strokeOpacity="0.55"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeDasharray="46 34"
-          className="animate-flow-lines"
-        />
-        <path
-          d="M-40 215 C 200 165, 430 280, 840 195"
-          stroke="#2E9BFF"
-          strokeOpacity="0.5"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeDasharray="30 26"
-          className="animate-flow-lines-slow"
-        />
-        <path
-          d="M-40 320 C 220 275, 420 385, 840 305"
-          stroke="#7DBCFF"
-          strokeOpacity="0.42"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeDasharray="18 22"
-          className="animate-flow-lines-slower"
-        />
-        <path
-          d="M-40 425 C 240 385, 450 465, 840 415"
-          stroke="#38E1FF"
-          strokeOpacity="0.32"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeDasharray="60 40"
-          className="animate-flow-lines"
-        />
-        <circle cx="620" cy="150" r="3.5" fill="#38E1FF" opacity="0.8" className="animate-flow-lines" />
-        <circle cx="700" cy="330" r="2.5" fill="#7DBCFF" opacity="0.7" className="animate-flow-lines-slow" />
-      </g>
-    </svg>
-  );
-}
-
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-slate-50 dark:bg-[#04070E] bg-ts-ambient text-slate-900 dark:text-white pt-14 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-200 dark:border-[#1C2C4E] transition-colors">
@@ -242,13 +188,12 @@ export function HeroSection() {
                 className="w-full h-auto"
                 priority
               />
-              <FlowingLines />
             </div>
           </div>
 
-          {/* Desktop visual: bleeds off the right screen edge, lines stream outward */}
+          {/* Desktop visual: bleeds off the right screen edge */}
           <div
-            className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[-20vw] w-[58vw] max-w-[880px] pointer-events-none"
+            className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[-12vw] w-[58vw] max-w-[880px] pointer-events-none"
             aria-hidden="true"
           >
             <div className="absolute inset-16 bg-[#2E9BFF]/25 dark:bg-[#2E9BFF]/30 blur-[100px] rounded-full" />
@@ -261,7 +206,6 @@ export function HeroSection() {
                 className="w-full h-auto"
                 priority
               />
-              <FlowingLines />
             </div>
           </div>
 
