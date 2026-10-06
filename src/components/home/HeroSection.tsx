@@ -153,50 +153,6 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Dynamic Upper Horizontal Moving Services Line (Right to Left) */}
-            <div className="pt-2">
-              <div className="relative overflow-hidden py-2.5 border-y border-slate-200/80 dark:border-[#1C2C4E]/80 bg-white/40 dark:bg-[#0A1226]/50 backdrop-blur-md rounded-xl shadow-xs">
-                {/* Left & Right Smooth Gradient Masks */}
-                <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-slate-50 dark:from-[#04070E] to-transparent" />
-                <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-slate-50 dark:from-[#04070E] to-transparent" />
-
-                {/* Marquee Track moving dynamically from Right to Left */}
-                <div className="animate-marquee-rtl flex items-center gap-2.5">
-                  {[
-                    { label: "Cybersecurity & Hardening", icon: ShieldCheck },
-                    { label: "AI Automation & LLMs", icon: Cpu },
-                    { label: "Custom POS & ERP", icon: Code2 },
-                    { label: "Full-Stack Web Engineering", icon: Globe },
-                    { label: "Vulnerability Assessments", icon: Lock },
-                    { label: "Cloud Infrastructure", icon: Cloud },
-                    { label: "Intelligent Workflows", icon: Sparkles },
-                    { label: "Mobile Applications", icon: Smartphone },
-                    { label: "SaaS Product Engineering", icon: Terminal },
-                    { label: "Cybersecurity & Hardening", icon: ShieldCheck },
-                    { label: "AI Automation & LLMs", icon: Cpu },
-                    { label: "Custom POS & ERP", icon: Code2 },
-                    { label: "Full-Stack Web Engineering", icon: Globe },
-                    { label: "Vulnerability Assessments", icon: Lock },
-                    { label: "Cloud Infrastructure", icon: Cloud },
-                    { label: "Intelligent Workflows", icon: Sparkles },
-                    { label: "Mobile Applications", icon: Smartphone },
-                    { label: "SaaS Product Engineering", icon: Terminal },
-                  ].map((item, idx) => {
-                    const Icon = item.icon;
-                    return (
-                      <div
-                        key={idx}
-                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-[#0D1830]/80 border border-slate-200 dark:border-[#24365C]/60 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs whitespace-nowrap hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                      >
-                        <Icon className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-                        <span>{item.label}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-
             {/* Executive Proof Metric Strip */}
             <div className="pt-6 border-t border-slate-200 dark:border-[#1C2C4E]/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
               <div className="p-3 rounded-xl bg-white dark:bg-[#0A1120]/60 border border-slate-200 dark:border-[#1C2C4E] shadow-sm hover:border-[#2E9BFF]/40 hover:shadow-[0_8px_24px_-8px_rgba(46,155,255,0.4)] transition-all duration-300">
