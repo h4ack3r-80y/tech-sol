@@ -15,7 +15,7 @@ export default function IhsCaseStudyPage() {
   const project = siteConfig.projects.find((p) => p.id === "ihs-pos-erp")!;
 
   return (
-    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#070B14] min-h-screen text-slate-900 dark:text-white relative transition-colors">
+    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#04070E] min-h-screen text-slate-900 dark:text-white relative transition-colors">
       <div className="absolute inset-0 bg-corporate-grid opacity-25 dark:opacity-10 pointer-events-none" />
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -29,7 +29,7 @@ export default function IhsCaseStudyPage() {
         </nav>
 
         {/* Case Study Header Hero */}
-        <div className="rounded-3xl p-8 sm:p-12 mb-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm relative overflow-hidden">
+        <div className="rounded-3xl p-8 sm:p-12 mb-10 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-400" />
           <div className="absolute -top-24 -right-24 w-72 h-72 bg-blue-500/10 dark:bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
@@ -37,7 +37,7 @@ export default function IhsCaseStudyPage() {
               <ShieldCheck className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
               <span>{project.statusBadge}</span>
             </div>
-            <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold">
+            <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0D1830] text-slate-600 dark:text-slate-300 font-semibold">
               {project.category}
             </span>
           </div>
@@ -50,7 +50,7 @@ export default function IhsCaseStudyPage() {
             {project.positioning}
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800 text-xs font-mono">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-[#1C2C4E] text-xs font-mono">
             <div>
               <span className="text-slate-500 dark:text-slate-400 uppercase font-semibold">Client / Domain</span>
               <div className="text-slate-900 dark:text-white font-bold text-sm mt-1">{project.businessType}</div>
@@ -76,7 +76,7 @@ export default function IhsCaseStudyPage() {
             {project.metrics.map((metric, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm text-center hover:shadow-lg hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300"
+                className="rounded-2xl p-5 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm text-center hover:shadow-lg hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300"
               >
                 <div className="text-2xl sm:text-3xl font-extrabold font-mono text-blue-600 dark:text-blue-400">
                   {metric.value}
@@ -91,7 +91,7 @@ export default function IhsCaseStudyPage() {
 
         {/* Narrative Sections */}
         <div className="space-y-8">
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
               <Layers className="w-5 h-5 text-blue-500" />
               <span>Project Overview &amp; Commercial Scope</span>
@@ -101,21 +101,21 @@ export default function IhsCaseStudyPage() {
             </p>
           </section>
 
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">The Operational Challenge</h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {project.challenge}
             </p>
           </section>
 
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Engineering Approach</h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {project.approach}
             </p>
           </section>
 
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Production Solution Implemented</h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {project.solution}
@@ -123,7 +123,7 @@ export default function IhsCaseStudyPage() {
           </section>
 
           {/* Key Verified Features */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-emerald-500" />
               <span>Key Verified Production Capabilities</span>
@@ -139,9 +139,9 @@ export default function IhsCaseStudyPage() {
           </section>
 
           {/* System Showcase Gallery */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm overflow-hidden">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm overflow-hidden">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">System Architecture &amp; Interface</h2>
-            <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
+            <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
               <div className="overflow-hidden">
                 <Image
                   src="/images/projects/ihs/ihs-es-overview.jpg"
@@ -157,7 +157,7 @@ export default function IhsCaseStudyPage() {
               IHS E&amp;S — Electronics &amp; Solar POS ERP Suite. 100% offline-first with Khata ledger sync.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/projects/ihs/ihs-es-pos-counter.jpg"
@@ -167,11 +167,11 @@ export default function IhsCaseStudyPage() {
                     className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                   Counter terminal — dual discount, loss-guarding &amp; instant Khata sync
                 </p>
               </div>
-              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/projects/ihs/ihs-es-inventory-suite.jpg"
@@ -181,7 +181,7 @@ export default function IhsCaseStudyPage() {
                     className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                   Inventory, multi-godown stock valuation &amp; financial P&amp;L suite
                 </p>
               </div>
@@ -190,7 +190,7 @@ export default function IhsCaseStudyPage() {
 
           {/* Technology Stack Tags */}
           {project.techStack && (
-            <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+            <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
               <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
                 <Cpu className="w-5 h-5 text-blue-500" />
                 <span>Engineered Technology Stack</span>
@@ -202,7 +202,7 @@ export default function IhsCaseStudyPage() {
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-xl text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-semibold"
+                    className="px-3 py-1.5 rounded-xl text-xs font-mono bg-slate-100 dark:bg-[#0D1830] text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-[#24365C] font-semibold"
                   >
                     {tech}
                   </span>
@@ -212,7 +212,7 @@ export default function IhsCaseStudyPage() {
           )}
 
           {/* Business Outcomes */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-emerald-500" />
               <span>Commercial Outcome &amp; Value Delivered</span>
@@ -223,7 +223,7 @@ export default function IhsCaseStudyPage() {
           </section>
 
           {/* Lessons Learned */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
               <Server className="w-5 h-5 text-blue-500" />
               <span>Lessons &amp; Continuous Optimization</span>
@@ -234,7 +234,7 @@ export default function IhsCaseStudyPage() {
           </section>
 
           {/* CTA Box */}
-          <div className="rounded-3xl bg-blue-600 text-white p-8 sm:p-12 text-center space-y-4 shadow-xl">
+          <div className="rounded-3xl bg-gradient-to-br from-[#1E88FF] via-[#2E9BFF] to-[#1668DC] text-white shadow-[0_24px_70px_-18px_rgba(46,155,255,0.65)] p-8 sm:p-12 text-center space-y-4 shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Need a Similar Business Management Solution?</h3>
             <p className="text-sm sm:text-base text-blue-100 max-w-xl mx-auto font-normal">
               We engineer custom POS and ERP software specifically configured to your business inventory, counter speed, and reporting needs.

@@ -13,12 +13,12 @@ export function Footer() {
   const ledgerProUrl = config.ledgerPro?.url || "https://www.ledgerprosolution.com";
 
   return (
-    <footer className="bg-[#070B14] text-slate-400 border-t border-slate-800">
+    <footer className="bg-[#04070E] bg-ts-ambient-soft text-slate-400 border-t border-[#1C2C4E]">
       {/* Top pre-footer banner */}
-      <div className="border-b border-slate-800/80 bg-[#0B1222] py-8">
+      <div className="border-b border-[#1C2C4E]/80 bg-[#070D1C] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-11 h-11 relative flex-shrink-0 bg-white p-0.5 rounded-full border border-blue-500/30 flex items-center justify-center overflow-hidden shadow-sm">
+            <div className="w-11 h-11 relative flex-shrink-0 bg-white p-0.5 rounded-full border border-blue-500/30 flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(46,155,255,0.5)]">
               <Image
                 src="/images/official-logo.png"
                 alt="TechSol Official Logo"
@@ -51,7 +51,7 @@ export function Footer() {
             </a>
             <Link
               href="/request-a-quote"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold transition-all shadow-sm hover:scale-[1.01]"
+              className="ts-btn-primary inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-white text-xs font-semibold transition-all hover:scale-[1.01]"
             >
               <span>Request a Quote</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -76,7 +76,7 @@ export function Footer() {
             </div>
 
             {/* Flagship SaaS Spotlight Box */}
-            <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/40 transition-colors max-w-md space-y-2">
+            <div className="p-3.5 rounded-2xl bg-[#0A1120] border border-[#1C2C4E] hover:border-[#2E9BFF]/50 hover:shadow-[0_8px_28px_-10px_rgba(46,155,255,0.5)] transition-all max-w-md space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-white flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-blue-400" />

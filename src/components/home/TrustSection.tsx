@@ -43,7 +43,7 @@ export function TrustSection() {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-[#090F1E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative overflow-hidden transition-colors">
+    <section className="py-20 bg-white dark:bg-[#070D1C] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative overflow-hidden transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           kicker="Our Core Philosophy"
@@ -57,7 +57,7 @@ export function TrustSection() {
             return (
               <div
                 key={idx}
-                className="p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0D1527] hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-200 group flex flex-col justify-between shadow-sm hover:shadow-md"
+                className="p-7 rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-slate-50/50 dark:bg-[#0A1226] hover:border-blue-500/40 dark:hover:border-blue-500/40 transition-all duration-200 group flex flex-col justify-between shadow-sm hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">

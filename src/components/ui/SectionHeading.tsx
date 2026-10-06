@@ -22,12 +22,12 @@ export function SectionHeading({
       className={`mb-12 ${isCenter ? "text-center max-w-3xl mx-auto" : "max-w-3xl"}`}
     >
       {kicker && (
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/80 mb-4 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider text-blue-700 dark:text-[#7DBCFF] bg-blue-50 dark:bg-[#0E2A5C]/50 border border-blue-200 dark:border-[#2E9BFF]/40 mb-4 shadow-sm dark:shadow-[0_0_18px_rgba(46,155,255,0.3)]">
           <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400" />
           <span>{kicker}</span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] font-display ts-text-glow">
         {title}
       </h2>
       {subtitle && (

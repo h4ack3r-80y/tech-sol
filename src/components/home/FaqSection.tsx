@@ -14,7 +14,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-[#090F1E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative transition-colors">
+    <section className="py-20 bg-white dark:bg-[#070D1C] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative transition-colors">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="Common Questions"
@@ -29,12 +29,12 @@ export function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50/50 dark:bg-[#0D1527] hover:border-blue-500/40 transition-all duration-200 shadow-sm"
+                className="rounded-2xl border border-slate-200 dark:border-[#1C2C4E] overflow-hidden bg-slate-50/50 dark:bg-[#0A1226] hover:border-blue-500/40 transition-all duration-200 shadow-sm"
               >
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-slate-100/60 dark:hover:bg-slate-800/40 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-slate-100/60 dark:hover:bg-[#12203A]/40 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
                   aria-expanded={isOpen}
                 >
                   <span className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">
@@ -47,7 +47,7 @@ export function FaqSection() {
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-3 text-sm font-normal text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 bg-white dark:bg-[#0A101F]">
+                  <div className="px-6 pb-5 pt-3 text-sm font-normal text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-[#1C2C4E]/80 bg-white dark:bg-[#070D1C]">
                     {faq.answer}
                   </div>
                 )}

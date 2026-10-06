@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#070B14] min-h-screen text-slate-900 dark:text-white relative transition-colors">
+    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#04070E] min-h-screen text-slate-900 dark:text-white relative transition-colors">
       <div className="absolute inset-0 bg-corporate-grid opacity-25 dark:opacity-10 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
@@ -26,8 +26,8 @@ export default function ContactPage() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Left Column: Direct channels & Verified Information */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="rounded-3xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-4">
+            <div className="rounded-3xl p-8 space-y-6 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] pb-4">
                 Official Business Channels
               </h2>
 
@@ -96,14 +96,14 @@ export default function ContactPage() {
             </div>
 
             {/* Quick Action Cards */}
-            <div className="rounded-2xl p-6 space-y-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+            <div className="rounded-2xl p-6 space-y-4 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
               <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Alternative Inquiries
               </h3>
               <div className="space-y-3">
                 <Link
                   href="/book-a-consultation"
-                  className="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-[#0A101F] hover:bg-slate-100 dark:hover:bg-[#111c34] border border-slate-200 dark:border-slate-800 text-sm font-semibold text-slate-900 dark:text-white transition-all group"
+                  className="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-[#070D1C] hover:bg-slate-100 dark:hover:bg-[#111c34] border border-slate-200 dark:border-[#1C2C4E] text-sm font-semibold text-slate-900 dark:text-white transition-all group"
                 >
                   <span className="flex items-center gap-2.5">
                     <Calendar className="w-4 h-4 text-blue-600 dark:text-blue-400" />
@@ -114,7 +114,7 @@ export default function ContactPage() {
 
                 <Link
                   href="/request-a-quote"
-                  className="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-[#0A101F] hover:bg-slate-100 dark:hover:bg-[#111c34] border border-slate-200 dark:border-slate-800 text-sm font-semibold text-slate-900 dark:text-white transition-all group"
+                  className="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-[#070D1C] hover:bg-slate-100 dark:hover:bg-[#111c34] border border-slate-200 dark:border-[#1C2C4E] text-sm font-semibold text-slate-900 dark:text-white transition-all group"
                 >
                   <span className="flex items-center gap-2.5">
                     <Clock className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
@@ -126,7 +126,7 @@ export default function ContactPage() {
             </div>
 
             {/* Privacy & Security guarantee */}
-            <div className="p-5 rounded-2xl bg-slate-100 dark:bg-[#0A101F] border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-300 flex items-start gap-3">
+            <div className="p-5 rounded-2xl bg-slate-100 dark:bg-[#070D1C] border border-slate-200 dark:border-[#1C2C4E] text-xs text-slate-600 dark:text-slate-300 flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
               <span>
                 <strong className="text-slate-900 dark:text-white">Confidentiality Guarantee:</strong> All project discussions, operational specifics, and communications are held strictly confidential.
@@ -136,7 +136,7 @@ export default function ContactPage() {
 
           {/* Right Column: Full Interactive Contact Form */}
           <div className="lg:col-span-7">
-            <div className="rounded-3xl p-8 sm:p-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+            <div className="rounded-3xl p-8 sm:p-10 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
                   Send a Project Request

@@ -73,7 +73,7 @@ export default function ProcessPage() {
   ];
 
   return (
-    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#070B14] min-h-screen text-slate-900 dark:text-white relative transition-colors">
+    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#04070E] min-h-screen text-slate-900 dark:text-white relative transition-colors">
       <div className="absolute inset-0 bg-corporate-grid opacity-25 dark:opacity-10 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Breadcrumb */}
@@ -101,7 +101,7 @@ export default function ProcessPage() {
             return (
               <div
                 key={step.step}
-                className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] p-8 sm:p-10 shadow-sm hover:border-blue-500/40 transition-all duration-300"
+                className="rounded-3xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] p-8 sm:p-10 shadow-sm hover:border-blue-500/40 transition-all duration-300"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Step Description */}
@@ -132,7 +132,7 @@ export default function ProcessPage() {
                   </div>
 
                   {/* Step Deliverables */}
-                  <div className="lg:col-span-5 p-6 rounded-2xl bg-slate-50 dark:bg-[#0A101F] border border-slate-200 dark:border-slate-800">
+                  <div className="lg:col-span-5 p-6 rounded-2xl bg-slate-50 dark:bg-[#070D1C] border border-slate-200 dark:border-[#1C2C4E]">
                     <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                       <span>Phase Deliverables</span>
@@ -155,7 +155,7 @@ export default function ProcessPage() {
 
         {/* Engineering Philosophy Cards */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <div className="p-7 rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <Shield className="w-6 h-6 text-blue-600 dark:text-blue-400 mb-3" />
             <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2">
               Defensive by Default
@@ -165,7 +165,7 @@ export default function ProcessPage() {
             </p>
           </div>
 
-          <div className="p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <div className="p-7 rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <Layers className="w-6 h-6 text-emerald-600 dark:text-emerald-400 mb-3" />
             <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2">
               Modular &amp; Maintainable
@@ -175,7 +175,7 @@ export default function ProcessPage() {
             </p>
           </div>
 
-          <div className="p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <div className="p-7 rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <Rocket className="w-6 h-6 text-indigo-600 dark:text-indigo-400 mb-3" />
             <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2">
               Business ROI Focus
@@ -187,7 +187,7 @@ export default function ProcessPage() {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-16 rounded-3xl bg-blue-600 text-white p-8 sm:p-12 text-center space-y-4 shadow-xl">
+        <div className="mt-16 rounded-3xl bg-gradient-to-br from-[#1E88FF] via-[#2E9BFF] to-[#1668DC] text-white shadow-[0_24px_70px_-18px_rgba(46,155,255,0.65)] p-8 sm:p-12 text-center space-y-4 shadow-xl">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
             Ready to Plan Your Next System?
           </h3>

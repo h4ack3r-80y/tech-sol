@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-24 bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative transition-colors">
+    <section className="py-20 lg:py-24 bg-slate-50 dark:bg-[#04070E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="Practical Value"
@@ -17,7 +17,7 @@ export function WhyChooseUs() {
           {siteConfig.whyChooseUs.map((point, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] hover:border-blue-500/40 shadow-sm transition-all flex flex-col justify-start"
+              className="p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] hover:border-blue-500/40 shadow-sm transition-all flex flex-col justify-start"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400 flex items-center justify-center flex-shrink-0">

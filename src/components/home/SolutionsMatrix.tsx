@@ -13,7 +13,7 @@ export function SolutionsMatrix() {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative transition-colors">
+    <section className="py-20 lg:py-24 bg-slate-50 dark:bg-[#04070E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="Strategic Framework"
@@ -28,7 +28,7 @@ export function SolutionsMatrix() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] hover:border-blue-500/40 p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md"
+                className="rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] hover:border-blue-500/40 p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -54,7 +54,7 @@ export function SolutionsMatrix() {
                 </div>
 
                 <div>
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2.5 border-t border-slate-100 dark:border-slate-800 pt-4">
+                  <div className="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2.5 border-t border-slate-100 dark:border-[#1C2C4E] pt-4">
                     Capabilities Included
                   </div>
                   <ul className="space-y-1.5 mb-6 text-xs text-slate-700 dark:text-slate-300">

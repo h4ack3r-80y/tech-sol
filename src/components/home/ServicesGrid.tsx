@@ -32,7 +32,7 @@ export function ServicesGrid() {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-white dark:bg-[#070B14] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative transition-colors">
+    <section className="py-20 lg:py-24 bg-white dark:bg-[#04070E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <SectionHeading
@@ -56,14 +56,14 @@ export function ServicesGrid() {
             return (
               <div
                 key={service.id}
-                className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] hover:border-blue-500/50 dark:hover:border-blue-500/50 p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl group"
+                className="rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] hover:border-blue-500/50 dark:hover:border-blue-500/50 p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-11 h-11 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-100 dark:border-blue-800/80 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 uppercase tracking-wide">
+                    <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-[#0D1830] border border-slate-200 dark:border-[#24365C] text-slate-600 dark:text-slate-400 uppercase tracking-wide">
                       {service.category}
                     </span>
                   </div>
@@ -76,7 +76,7 @@ export function ServicesGrid() {
                     {service.shortDescription}
                   </p>
 
-                  <div className="border-t border-slate-100 dark:border-slate-800 pt-4 mb-6">
+                  <div className="border-t border-slate-100 dark:border-[#1C2C4E] pt-4 mb-6">
                     <div className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
                       Key Capabilities
                     </div>
@@ -93,7 +93,7 @@ export function ServicesGrid() {
 
                 <Link
                   href={`/services/${service.slug}`}
-                  className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors pt-4 border-t border-slate-100 dark:border-slate-800"
+                  className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors pt-4 border-t border-slate-100 dark:border-[#1C2C4E]"
                 >
                   <span>Explore Capabilities</span>
                   <ArrowRight className="w-3.5 h-3.5" />

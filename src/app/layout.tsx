@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -20,6 +20,13 @@ const inter = Inter({
   variable: "--font-sans",
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -100,7 +107,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark scroll-smooth ${inter.variable} ${plusJakarta.variable}`}
+      className={`dark scroll-smooth ${inter.variable} ${plusJakarta.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -128,7 +135,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-sans antialiased bg-slate-50 dark:bg-[#070B14] text-slate-900 dark:text-white selection:bg-blue-600 selection:text-white transition-colors duration-200">
+      <body className="min-h-screen flex flex-col font-sans antialiased bg-slate-50 dark:bg-[#04070E] text-slate-900 dark:text-white selection:bg-[#2E9BFF] selection:text-white transition-colors duration-200">
         <ContentProvider>
           <ThemeProvider>
             <Header />

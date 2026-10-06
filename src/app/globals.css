@@ -14,22 +14,22 @@
     --text-secondary: #334155;
     --text-muted: #64748B;
     --border-color: #E2E8F0;
-    --brand-blue: #2563EB;
-    --brand-blue-hover: #1D4ED8;
+    --brand-blue: #1E88FF;
+    --brand-blue-hover: #1565D8;
     --brand-teal: #0D9488;
   }
 
   .dark {
-    --bg-primary: #070B14;
-    --bg-secondary: #0D1527;
-    --bg-card: #0F1A30;
+    --bg-primary: #04070E;
+    --bg-secondary: #070D1C;
+    --bg-card: #0A1226;
     --text-primary: #FFFFFF;
     --text-secondary: #CBD5E1;
-    --text-muted: #94A3B8;
-    --border-color: rgba(255, 255, 255, 0.08);
-    --brand-blue: #2563EB;
-    --brand-blue-hover: #3B82F6;
-    --brand-teal: #14B8A6;
+    --text-muted: #8EA0BC;
+    --border-color: rgba(96, 140, 255, 0.14);
+    --brand-blue: #2E9BFF;
+    --brand-blue-hover: #5AB2FF;
+    --brand-teal: #38E1FF;
   }
 
   body {
@@ -58,6 +58,107 @@
   }
 }
 
+/* TechSol Business-Card Premium Theme Utilities */
+@theme {
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* Electric-blue glowing primary button (card-inspired) */
+.ts-btn-primary {
+  background: linear-gradient(135deg, #1E88FF 0%, #2E9BFF 48%, #1668DC 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 0 1px rgba(140, 190, 255, 0.35),
+    0 10px 28px -8px rgba(46, 155, 255, 0.65),
+    0 2px 10px rgba(46, 155, 255, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.25s ease, filter 0.2s ease;
+}
+.ts-btn-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 0 0 1px rgba(140, 190, 255, 0.45),
+    0 14px 34px -8px rgba(46, 155, 255, 0.8),
+    0 4px 14px rgba(46, 155, 255, 0.45);
+}
+.ts-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Gradient-border glow frame for premium cards */
+.ts-glow-frame {
+  position: relative;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0A1226, #0A1226) padding-box,
+    linear-gradient(140deg, rgba(90, 160, 255, 0.55), rgba(90, 160, 255, 0.08) 35%, rgba(56, 225, 255, 0.35) 70%, rgba(90, 160, 255, 0.12)) border-box;
+}
+.ts-glow-frame-soft {
+  position: relative;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0A1226, #0A1226) padding-box,
+    linear-gradient(140deg, rgba(90, 160, 255, 0.28), rgba(90, 160, 255, 0.05) 45%, rgba(56, 225, 255, 0.18)) border-box;
+}
+
+/* Luminous heading text */
+.dark .ts-text-glow {
+  text-shadow: 0 0 28px rgba(46, 155, 255, 0.4), 0 0 80px rgba(46, 155, 255, 0.16);
+}
+.ts-text-gradient {
+  background: linear-gradient(100deg, #1E40AF 10%, #1E88FF 55%, #0EA5E9 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.dark .ts-text-gradient {
+  background: linear-gradient(100deg, #FFFFFF 20%, #9CC8FF 55%, #38E1FF 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Ambient card-like background: deep navy with electric-blue light streaks */
+.bg-ts-ambient {
+  background-image:
+    radial-gradient(ellipse 55% 42% at 12% -5%, rgba(46, 155, 255, 0.16), transparent 62%),
+    radial-gradient(ellipse 45% 38% at 88% 8%, rgba(56, 225, 255, 0.09), transparent 60%),
+    radial-gradient(ellipse 75% 55% at 50% 112%, rgba(30, 100, 255, 0.12), transparent 62%);
+}
+.bg-ts-ambient-soft {
+  background-image:
+    radial-gradient(ellipse 50% 36% at 50% -8%, rgba(46, 155, 255, 0.1), transparent 60%),
+    radial-gradient(ellipse 60% 45% at 50% 115%, rgba(30, 100, 255, 0.07), transparent 60%);
+}
+
+/* Thin luminous divider line */
+.ts-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(90, 160, 255, 0.5), rgba(56, 225, 255, 0.35), transparent);
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #04070E;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1E3A6E, #12305E);
+  border-radius: 8px;
+  border: 2px solid #04070E;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2E9BFF, #1668DC);
+}
+::selection {
+  background: rgba(46, 155, 255, 0.35);
+  color: #FFFFFF;
+}
+
 /* Corporate Enterprise Card Utilities */
 .corporate-card {
   background-color: #FFFFFF;
@@ -67,16 +168,16 @@
 }
 
 .dark .corporate-card {
-  background-color: rgba(13, 21, 39, 0.85);
+  background: linear-gradient(160deg, rgba(16, 28, 56, 0.92), rgba(10, 18, 38, 0.88));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  border-color: rgba(96, 140, 255, 0.14);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(140, 180, 255, 0.06);
 }
 
 .corporate-card:hover {
-  border-color: rgba(37, 99, 235, 0.35);
-  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08);
+  border-color: rgba(46, 155, 255, 0.45);
+  box-shadow: 0 12px 32px -8px rgba(46, 155, 255, 0.22), 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Backwards-compatible glass-card styled with corporate restraint */
@@ -88,16 +189,16 @@
 }
 
 .dark .glass-card {
-  background: rgba(13, 21, 39, 0.85);
+  background: linear-gradient(160deg, rgba(16, 28, 56, 0.88), rgba(10, 18, 38, 0.82));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(96, 140, 255, 0.14);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(140, 180, 255, 0.06);
 }
 
 .glass-card:hover {
-  border-color: rgba(37, 99, 235, 0.35);
-  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08);
+  border-color: rgba(46, 155, 255, 0.45);
+  box-shadow: 0 12px 32px -8px rgba(46, 155, 255, 0.22);
 }
 
 .glass-pill {

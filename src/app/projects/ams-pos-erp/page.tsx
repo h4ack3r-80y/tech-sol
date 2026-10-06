@@ -15,7 +15,7 @@ export default function AmsCaseStudyPage() {
   const project = siteConfig.projects.find((p) => p.id === "ams-pos-erp")!;
 
   return (
-    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#070B14] min-h-screen text-slate-900 dark:text-white relative transition-colors">
+    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#04070E] min-h-screen text-slate-900 dark:text-white relative transition-colors">
       <div className="absolute inset-0 bg-corporate-grid opacity-25 dark:opacity-10 pointer-events-none" />
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -29,13 +29,13 @@ export default function AmsCaseStudyPage() {
         </nav>
 
         {/* Case Study Header Hero */}
-        <div className="rounded-3xl p-8 sm:p-12 mb-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+        <div className="rounded-3xl p-8 sm:p-12 mb-10 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 text-xs font-mono font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
               <span>{project.statusBadge}</span>
             </div>
-            <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold">
+            <span className="text-xs font-mono px-3 py-1 rounded-full bg-slate-100 dark:bg-[#0D1830] text-slate-600 dark:text-slate-300 font-semibold">
               {project.category}
             </span>
           </div>
@@ -48,7 +48,7 @@ export default function AmsCaseStudyPage() {
             {project.positioning}
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800 text-xs font-mono">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-[#1C2C4E] text-xs font-mono">
             <div>
               <span className="text-slate-500 dark:text-slate-400 uppercase font-semibold">Client / Domain</span>
               <div className="text-slate-900 dark:text-white font-bold text-sm mt-1">{project.businessType}</div>
@@ -74,7 +74,7 @@ export default function AmsCaseStudyPage() {
             {project.metrics.map((metric, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm text-center"
+                className="rounded-2xl p-5 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm text-center"
               >
                 <div className="text-2xl sm:text-3xl font-extrabold font-mono text-blue-600 dark:text-blue-400">
                   {metric.value}
@@ -89,7 +89,7 @@ export default function AmsCaseStudyPage() {
 
         {/* Narrative Sections */}
         <div className="space-y-8">
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
               <Layers className="w-5 h-5 text-blue-500" />
               <span>Project Overview &amp; Commercial Scope</span>
@@ -99,21 +99,21 @@ export default function AmsCaseStudyPage() {
             </p>
           </section>
 
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">The Operational Challenge</h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {project.challenge}
             </p>
           </section>
 
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Engineering Approach</h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {project.approach}
             </p>
           </section>
 
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Production Solution Implemented</h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {project.solution}
@@ -121,7 +121,7 @@ export default function AmsCaseStudyPage() {
           </section>
 
           {/* Key Verified Features */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-emerald-500" />
               <span>Key Verified Production Capabilities</span>
@@ -137,7 +137,7 @@ export default function AmsCaseStudyPage() {
           </section>
 
           {/* System Showcase Gallery */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm overflow-hidden">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm overflow-hidden">
             <div className="flex items-center justify-between flex-wrap gap-3 mb-2">
               <h2 className="text-xl font-bold text-slate-900 dark:text-white">System Architecture &amp; Interface</h2>
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800">
@@ -151,7 +151,7 @@ export default function AmsCaseStudyPage() {
             <p className="text-sm text-slate-600 dark:text-slate-300 mb-5 leading-relaxed">
               Real interface captures from the deployed superstore system — commercial data anonymized for privacy.
             </p>
-            <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+            <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
               <div className="overflow-hidden">
                 <Image
                   src="/images/projects/ams/ams-live-dashboard.png"
@@ -162,12 +162,12 @@ export default function AmsCaseStudyPage() {
                   priority
                 />
               </div>
-              <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+              <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                 Live dashboard — today&apos;s sales, cash intake, receivables (Udhar) &amp; P&amp;L trends
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/projects/ams/ams-live-sale-invoice.png"
@@ -177,11 +177,11 @@ export default function AmsCaseStudyPage() {
                     className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                   Sale invoice — barcode search, cash/Khata channels &amp; instant billing
                 </p>
               </div>
-              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/projects/ams/ams-live-customer360.png"
@@ -191,11 +191,11 @@ export default function AmsCaseStudyPage() {
                     className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                   Customer 360 — Khata ledger, sales history &amp; WhatsApp receipts
                 </p>
               </div>
-              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/projects/ams/ams-live-profit-loss.png"
@@ -205,11 +205,11 @@ export default function AmsCaseStudyPage() {
                     className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                   Profit &amp; loss — revenue vs cost, margins &amp; loss analysis
                 </p>
               </div>
-              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-[#24365C]/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/projects/ams/ams-live-settings.png"
@@ -219,7 +219,7 @@ export default function AmsCaseStudyPage() {
                     className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
                   />
                 </div>
-                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0A1226] border-t border-slate-200 dark:border-[#24365C]/60">
                   Store configuration — branding, contacts &amp; bank accounts on bills
                 </p>
               </div>
@@ -228,7 +228,7 @@ export default function AmsCaseStudyPage() {
 
           {/* Technology Stack Tags */}
           {project.techStack && (
-            <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+            <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
               <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
                 <Cpu className="w-5 h-5 text-blue-500" />
                 <span>Engineered Technology Stack</span>
@@ -240,7 +240,7 @@ export default function AmsCaseStudyPage() {
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-xl text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-semibold"
+                    className="px-3 py-1.5 rounded-xl text-xs font-mono bg-slate-100 dark:bg-[#0D1830] text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-[#24365C] font-semibold"
                   >
                     {tech}
                   </span>
@@ -250,7 +250,7 @@ export default function AmsCaseStudyPage() {
           )}
 
           {/* Business Outcomes */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-emerald-500" />
               <span>Commercial Outcome &amp; Value Delivered</span>
@@ -261,7 +261,7 @@ export default function AmsCaseStudyPage() {
           </section>
 
           {/* Lessons Learned */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
               <Server className="w-5 h-5 text-blue-500" />
               <span>Lessons &amp; Continuous Optimization</span>
@@ -272,7 +272,7 @@ export default function AmsCaseStudyPage() {
           </section>
 
           {/* CTA Box */}
-          <div className="rounded-3xl bg-blue-600 text-white p-8 sm:p-12 text-center space-y-4 shadow-xl">
+          <div className="rounded-3xl bg-gradient-to-br from-[#1E88FF] via-[#2E9BFF] to-[#1668DC] text-white shadow-[0_24px_70px_-18px_rgba(46,155,255,0.65)] p-8 sm:p-12 text-center space-y-4 shadow-xl">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Operating a Retail Superstore or Multi-Lane Market?</h3>
             <p className="text-sm sm:text-base text-blue-100 max-w-xl mx-auto font-normal">
               Discuss how an offline-first, weighted-average POS solution can transform your checkout speed and inventory controls.

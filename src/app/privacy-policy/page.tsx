@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#070B14] min-h-screen text-slate-900 dark:text-white relative transition-colors">
+    <div className="py-16 sm:py-24 bg-slate-50 dark:bg-[#04070E] min-h-screen text-slate-900 dark:text-white relative transition-colors">
       <div className="absolute inset-0 bg-corporate-grid opacity-25 dark:opacity-10 pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="rounded-3xl p-8 sm:p-12 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm space-y-8 text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+        <div className="rounded-3xl p-8 sm:p-12 border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-sm space-y-8 text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
           <div>
             <div className="text-xs font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1 font-semibold">
               Legal Disclosure
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
             <p>
               If you have any questions regarding this Privacy Policy or wish to modify any previously submitted details, please reach out directly:
             </p>
-            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#0A101F] border border-slate-200 dark:border-slate-800 text-xs font-mono space-y-1.5 text-slate-600 dark:text-slate-300">
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#070D1C] border border-slate-200 dark:border-[#1C2C4E] text-xs font-mono space-y-1.5 text-slate-600 dark:text-slate-300">
               <div><strong className="text-slate-900 dark:text-white">Business Name:</strong> {siteConfig.business.name}</div>
               <div><strong className="text-slate-900 dark:text-white">Location:</strong> {siteConfig.business.location.city}, {siteConfig.business.location.country}</div>
               <div><strong className="text-slate-900 dark:text-white">Phone / WhatsApp:</strong> {siteConfig.business.contact.phoneDisplay}</div>

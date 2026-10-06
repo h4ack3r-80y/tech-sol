@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export function ProcessTimeline() {
   return (
-    <section className="py-20 bg-white dark:bg-[#090F1E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 relative transition-colors">
+    <section className="py-20 bg-white dark:bg-[#070D1C] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <SectionHeading
@@ -27,7 +27,7 @@ export function ProcessTimeline() {
           {siteConfig.processSteps.map((step) => (
             <div
               key={step.step}
-              className="p-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-[#0D1527] hover:border-blue-500/40 transition-all duration-200 group flex flex-col justify-between shadow-sm hover:shadow-md"
+              className="p-7 rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-slate-50/50 dark:bg-[#0A1226] hover:border-blue-500/40 transition-all duration-200 group flex flex-col justify-between shadow-sm hover:shadow-md"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
