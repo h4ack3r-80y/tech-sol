@@ -117,9 +117,6 @@ export function Header() {
               className="relative inline-flex items-center gap-2 px-3.5 py-1.5 mx-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:via-indigo-500 hover:to-blue-600 shadow-sm shadow-blue-500/30 hover:shadow-md hover:shadow-blue-500/40 border border-white/20 dark:border-blue-400/40 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap group"
               title="LedgerPro Solution - Online Business Registration & Cloud Management"
             >
-              <span className="flex items-center justify-center w-5 h-5 rounded-lg bg-white/20 backdrop-blur-xs text-amber-300 group-hover:rotate-12 transition-transform">
-                <Sparkles className="w-3 h-3 fill-amber-300 text-amber-300" />
-              </span>
               <span className="tracking-tight font-extrabold text-[13px] text-white">LedgerPro</span>
               <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold uppercase tracking-wider bg-white/20 text-white border border-white/25">
                 SaaS

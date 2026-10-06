@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { LedgerProButton } from "@/components/layout/LedgerProButton";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { ContentProvider } from "@/context/ContentContext";
 import { siteConfig } from "@/config/siteConfig";
@@ -142,6 +143,7 @@ export default function RootLayout({
             <main className="flex-grow">{children}</main>
             <Footer />
             <WhatsAppButton />
+            <LedgerProButton />
           </ThemeProvider>
         </ContentProvider>
       </body>
