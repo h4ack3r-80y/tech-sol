@@ -19,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/cybersecurity",
     "/services/cloud-solutions",
     "/services/saas-development",
-    "/solutions",
     "/projects",
     "/projects/ihs-pos-erp",
     "/projects/ams-pos-erp",
