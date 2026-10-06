@@ -142,22 +142,9 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Actions: Theme Toggle, WhatsApp & Corporate CTA */}
+          {/* Actions: Theme Toggle & Corporate CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
-
-            {/* Direct WhatsApp CTA */}
-            <a
-              href={`https://wa.me/${config.business.contact.whatsappRaw}?text=${encodeURIComponent(
-                config.business.contact.whatsappMessage
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 border border-emerald-200 dark:border-emerald-500/30 rounded-full transition-colors"
-            >
-              <MessageSquare className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>WhatsApp</span>
-            </a>
 
             {/* Corporate Blue Button */}
             <Link
