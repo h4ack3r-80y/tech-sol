@@ -177,26 +177,15 @@ export function HeroSection() {
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             {/* Ambient glow behind robot */}
             <div className="absolute inset-8 bg-[#2E9BFF]/25 dark:bg-[#2E9BFF]/30 blur-[90px] rounded-full pointer-events-none" aria-hidden="true" />
-            <div className="relative rounded-[2rem] overflow-hidden border border-blue-500/30 dark:border-blue-400/30 shadow-[0_0_90px_-18px_rgba(46,155,255,0.6)] animate-float">
+            <div className="relative animate-float">
               <Image
-                src="/images/techsol-robot-hero.webp"
+                src="/images/techsol-robot-hero-left.webp"
                 alt="TechSol premium AI robot — deep navy and electric blue"
-                width={1024}
-                height={1024}
-                className="w-full h-auto object-cover"
+                width={1920}
+                height={1200}
+                className="w-full h-auto"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#04070E]/50 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
-            </div>
-
-            {/* Floating premium glass chips */}
-            <div className="absolute -left-3 sm:-left-6 top-10 inline-flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#0D1830]/80 backdrop-blur-md border border-slate-200 dark:border-blue-500/30 shadow-lg">
-              <Cpu className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span className="text-xs font-bold text-slate-800 dark:text-white">AI Automation</span>
-            </div>
-            <div className="absolute -right-2 sm:-right-5 bottom-12 inline-flex items-center gap-2 px-3.5 py-2.5 rounded-2xl bg-white/80 dark:bg-[#0D1830]/80 backdrop-blur-md border border-slate-200 dark:border-blue-500/30 shadow-lg">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span className="text-xs font-bold text-slate-800 dark:text-white">Zero-Trust Security</span>
             </div>
           </div>
 
