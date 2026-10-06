@@ -235,8 +235,8 @@ export function HeroSection() {
             <div className="absolute inset-8 bg-[#2E9BFF]/25 dark:bg-[#2E9BFF]/30 blur-[90px] rounded-full pointer-events-none" aria-hidden="true" />
             <div className="relative animate-float">
               <Image
-                src="/images/techsol-wireframe-head.webp"
-                alt="TechSol premium wireframe AI head — deep navy and electric blue"
+                src="/images/techsol-pixel-cube.webp"
+                alt="TechSol premium pixel cube — deep navy and electric blue"
                 width={1600}
                 height={1600}
                 className="w-full h-auto"
@@ -254,7 +254,7 @@ export function HeroSection() {
             <div className="absolute inset-16 bg-[#2E9BFF]/25 dark:bg-[#2E9BFF]/30 blur-[100px] rounded-full" />
             <div className="relative animate-float">
               <Image
-                src="/images/techsol-wireframe-head.webp"
+                src="/images/techsol-pixel-cube.webp"
                 alt=""
                 width={1600}
                 height={1600}
