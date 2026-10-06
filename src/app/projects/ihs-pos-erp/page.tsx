@@ -136,20 +136,50 @@ export default function IhsCaseStudyPage() {
             </ul>
           </section>
 
-          {/* System Showcase Diagram */}
+          {/* System Showcase Gallery */}
           <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">System Architecture &amp; Interface</h2>
-            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 aspect-[16/10] max-w-3xl mx-auto shadow-sm">
+            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm">
               <Image
-                src={project.imagePlaceholder}
-                alt="IHS E&S POS/ERP System Interface"
-                width={800}
-                height={500}
-                className="w-full h-full object-cover"
+                src="/images/projects/ihs/ihs-es-overview.png"
+                alt="IHS E&S Electronics & Solar POS ERP Suite overview"
+                width={972}
+                height={596}
+                className="w-full h-auto"
+                priority
               />
             </div>
-            <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 mt-3">
-              Production architectural model. Sensitive commercial customer data is anonymized.
+            <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 mt-3 mb-6">
+              IHS E&S — Electronics &amp; Solar POS ERP Suite. 100% offline-first with Khata ledger sync.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm">
+                <Image
+                  src="/images/projects/ihs/ihs-es-pos-counter.png"
+                  alt="IHS E&S counter sales terminal with dual discount and receipt printing"
+                  width={1460}
+                  height={257}
+                  className="w-full h-auto"
+                />
+                <p className="text-center text-xs font-mono text-slate-400 dark:text-slate-400 mt-0 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Counter terminal — dual discount, loss-guarding &amp; instant Khata sync
+                </p>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm">
+                <Image
+                  src="/images/projects/ihs/ihs-es-inventory-suite.png"
+                  alt="IHS E&S solar inventory, multi-godown stock and financial P&L suite"
+                  width={1094}
+                  height={552}
+                  className="w-full h-auto"
+                />
+                <p className="text-center text-xs font-mono text-slate-400 dark:text-slate-400 mt-0 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Inventory, multi-godown stock valuation &amp; financial P&amp;L suite
+                </p>
+              </div>
+            </div>
+            <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 mt-4">
+              Production interface mockups. Sensitive commercial customer data is anonymized.
             </p>
           </section>
 
