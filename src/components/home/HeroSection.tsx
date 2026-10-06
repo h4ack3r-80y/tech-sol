@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config/siteConfig";
-import { Card3D } from "@/components/3d/Card3D";
 import {
   ArrowRight,
   Database,
@@ -98,11 +97,11 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 gap-12 items-center">
           {/* Left Column: Executive Value Proposition */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="max-w-3xl mx-auto w-full space-y-6 text-center">
             {/* Title Section Brand Lockup & Kicker */}
-            <div className="flex items-center gap-3.5">
+            <div className="flex items-center justify-center gap-3.5">
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden bg-slate-900 p-0.5 border-2 border-blue-500/40 shadow-[0_0_24px_rgba(46,155,255,0.5)] flex-shrink-0 transition-transform hover:scale-105">
                 <Image
                   src="/images/techsol-symbol.png"
@@ -130,12 +129,12 @@ export function HeroSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl font-normal">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
               TechSol designs, builds, and deploys high-performance enterprise software, intelligent AI automations, robust cloud architectures, and specialized business management systems built for long-term operational resilience.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-1">
+            <div className="flex flex-wrap items-center justify-center gap-3.5 pt-1">
               <Link
                 href="/request-a-quote"
                 className="ts-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-white font-semibold text-sm tracking-tight"
@@ -154,7 +153,7 @@ export function HeroSection() {
             </div>
 
             {/* Executive Proof Metric Strip */}
-            <div className="pt-6 border-t border-slate-200 dark:border-[#1C2C4E]/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <div className="pt-6 border-t border-slate-200 dark:border-[#1C2C4E]/80 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs max-w-2xl mx-auto">
               <div className="p-3 rounded-xl bg-white dark:bg-[#0A1120]/60 border border-slate-200 dark:border-[#1C2C4E] shadow-sm hover:border-[#2E9BFF]/40 hover:shadow-[0_8px_24px_-8px_rgba(46,155,255,0.4)] transition-all duration-300">
                 <div className="font-extrabold text-slate-900 dark:text-white text-base">99.9%</div>
                 <div className="text-slate-500 dark:text-slate-400 text-[11px] font-mono mt-0.5">Uptime Standard</div>
@@ -174,116 +173,6 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Clean Enterprise Capabilities Showcase */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
-            <Card3D depth={10} className="w-full max-w-lg">
-              <div className="w-full rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] shadow-2xl dark:shadow-[0_0_70px_-14px_rgba(46,155,255,0.4)] overflow-hidden transition-colors">
-                {/* Console Window Top Bar */}
-                <div className="px-5 py-3.5 bg-slate-100/90 dark:bg-[#070D1C] border-b border-slate-200 dark:border-[#1C2C4E] flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-500 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block" />
-                    <span className="ml-2 text-xs font-mono font-semibold text-slate-700 dark:text-slate-200">
-                      TechSol Architecture Console
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 font-mono">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                    <span>ONLINE // 24ms</span>
-                  </div>
-                </div>
-
-                {/* Dashboard Inner Body */}
-                <div className="p-6 space-y-5 text-sm">
-                  {/* Status Banner */}
-                  <div className="p-4 rounded-xl bg-blue-50/80 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/30">
-                        <Server className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-slate-900 dark:text-white">
-                          Enterprise Digital Operations Engine
-                        </div>
-                        <div className="text-xs text-slate-500 dark:text-slate-400">
-                          Cloud Platforms, Custom Software &amp; Automated Systems
-                        </div>
-                      </div>
-                    </div>
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-blue-600 text-white uppercase">
-                      ACTIVE
-                    </span>
-                  </div>
-
-                  {/* Core Platform Pillars */}
-                  <div className="grid grid-cols-3 gap-3 text-center">
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0A1120]/80 border border-slate-200 dark:border-[#1C2C4E]">
-                      <Terminal className="w-5 h-5 text-blue-600 dark:text-blue-400 mx-auto mb-1.5" />
-                      <div className="font-bold text-slate-900 dark:text-white text-xs">Custom Software</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Desktop &amp; Web</div>
-                    </div>
-
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0A1120]/80 border border-slate-200 dark:border-[#1C2C4E]">
-                      <Cpu className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mx-auto mb-1.5" />
-                      <div className="font-bold text-slate-900 dark:text-white text-xs">AI &amp; Automation</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">OCR &amp; Pipelines</div>
-                    </div>
-
-                    <div className="p-3 rounded-xl bg-slate-50 dark:bg-[#0A1120]/80 border border-slate-200 dark:border-[#1C2C4E]">
-                      <ShieldCheck className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mx-auto mb-1.5" />
-                      <div className="font-bold text-slate-900 dark:text-white text-xs">Zero-Trust Cyber</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Role Defense</div>
-                    </div>
-                  </div>
-
-                  {/* Operational Capabilities Checklist */}
-                  <div className="space-y-2.5 border-t border-slate-200 dark:border-[#1C2C4E] pt-4">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="flex items-center gap-2.5 text-slate-700 dark:text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                        <span>High-Throughput Enterprise Data Ledgers</span>
-                      </span>
-                      <span className="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-                        Ready
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="flex items-center gap-2.5 text-slate-700 dark:text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                        <span>Offline-First Resilience &amp; Cloud Synchronization</span>
-                      </span>
-                      <span className="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-                        Synced
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="flex items-center gap-2.5 text-slate-700 dark:text-slate-300">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                        <span>Zero-Trust Role-Based Access Control (RBAC)</span>
-                      </span>
-                      <span className="font-mono text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-                        Enforced
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Bottom Verification Footer */}
-                  <div className="p-3 rounded-xl bg-slate-100 dark:bg-[#070D1C] text-xs text-slate-600 dark:text-slate-400 flex items-center justify-between border border-slate-200/60 dark:border-[#1C2C4E]">
-                    <span className="font-medium text-slate-800 dark:text-slate-300 flex items-center gap-1.5">
-                      <Lock className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                      <span>Enterprise SLA &amp; Confidentiality Guarantee</span>
-                    </span>
-                    <span className="font-semibold font-mono text-blue-600 dark:text-blue-400">
-                      TechSol Core
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Card3D>
-          </div>
         </div>
 
         {/* Full-Width Dynamic Animated Services Strip (Right to Left) */}
