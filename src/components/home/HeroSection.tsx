@@ -179,10 +179,10 @@ export function HeroSection() {
             <div className="absolute inset-8 bg-[#2E9BFF]/25 dark:bg-[#2E9BFF]/30 blur-[90px] rounded-full pointer-events-none" aria-hidden="true" />
             <div className="relative animate-float">
               <Image
-                src="/images/techsol-robot-hero-left.webp"
-                alt="TechSol premium AI robot — deep navy and electric blue"
-                width={1920}
-                height={1200}
+                src="/images/techsol-wireframe-head.webp"
+                alt="TechSol premium wireframe AI head — deep navy and electric blue"
+                width={1600}
+                height={1600}
                 className="w-full h-auto"
                 priority
               />
