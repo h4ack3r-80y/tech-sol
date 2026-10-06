@@ -14,7 +14,6 @@ import {
   Cloud,
   Layers,
   ArrowRight,
-  CheckCircle2,
 } from "lucide-react";
 
 export function ServicesGrid() {
@@ -33,7 +32,9 @@ export function ServicesGrid() {
 
   return (
     <section className="py-20 lg:py-24 bg-white dark:bg-[#04070E] text-slate-900 dark:text-white border-b border-slate-200 dark:border-[#1C2C4E] relative transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Ambient premium glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[280px] bg-[#2E9BFF]/10 blur-[120px] rounded-full pointer-events-none" aria-hidden="true" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <SectionHeading
             kicker="Our Services"
@@ -56,48 +57,39 @@ export function ServicesGrid() {
             return (
               <div
                 key={service.id}
-                className="rounded-2xl border border-slate-200 dark:border-[#1C2C4E] bg-white dark:bg-[#0A1226] hover:border-blue-500/50 dark:hover:border-blue-500/50 p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl group"
+                className="group relative rounded-3xl p-[1.5px] bg-gradient-to-br from-blue-500/50 via-indigo-500/25 to-cyan-400/40 hover:from-blue-400 hover:via-indigo-400/60 hover:to-cyan-300 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-20px_rgba(46,155,255,0.5)]"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-100 dark:border-blue-800/80 text-blue-600 dark:text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="rounded-3xl bg-white dark:bg-[#0A1226] p-7 sm:p-8 h-full flex flex-col">
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white flex items-center justify-center shadow-[0_8px_20px_-6px_rgba(46,155,255,0.6)] group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-[#0D1830] border border-slate-200 dark:border-[#24365C] text-slate-600 dark:text-slate-400 uppercase tracking-wide">
+                    <span className="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-[#0D1830] border border-slate-200 dark:border-[#24365C] text-slate-600 dark:text-slate-400 uppercase tracking-wide">
                       {service.category}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                    {service.title}
-                  </h3>
+                  {/* Premium framed service title */}
+                  <div className="rounded-2xl bg-gradient-to-r from-[#2E9BFF]/50 via-indigo-500/30 to-[#38E1FF]/50 p-[1.5px] mb-4 group-hover:from-[#2E9BFF] group-hover:via-indigo-400 group-hover:to-[#38E1FF] transition-all duration-300">
+                    <div className="rounded-2xl bg-slate-50 dark:bg-[#070D1C] px-4 py-3.5">
+                      <h3 className="text-[1.35rem] leading-snug font-bold font-display tracking-tight text-slate-900 dark:text-white">
+                        {service.title}
+                      </h3>
+                    </div>
+                  </div>
 
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6 font-normal">
+                  <p className="text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed mb-6 font-normal">
                     {service.shortDescription}
                   </p>
 
-                  <div className="border-t border-slate-100 dark:border-[#1C2C4E] pt-4 mb-6">
-                    <div className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3">
-                      Key Capabilities
-                    </div>
-                    <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-300 font-normal">
-                      {service.capabilities.slice(0, 4).map((cap, cIdx) => (
-                        <li key={cIdx} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                          <span>{cap}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="mt-auto inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors pt-5 border-t border-slate-100 dark:border-[#1C2C4E]"
+                  >
+                    <span>Explore Capabilities</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors pt-4 border-t border-slate-100 dark:border-[#1C2C4E]"
-                >
-                  <span>Explore Capabilities</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
               </div>
             );
           })}
