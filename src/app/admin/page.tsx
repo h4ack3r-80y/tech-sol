@@ -220,21 +220,6 @@ export default function AdminPage() {
         </div>
        </div>
 
-       {/* Default Credentials Notice */}
-       <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 text-[11px] text-blue-700 dark:text-blue-300 font-mono flex items-center justify-between">
-        <span>Default: Admin / password</span>
-        <button
-         type="button"
-         onClick={() => {
-          setUsernameInput("Admin");
-          setPasswordInput("password");
-         }}
-         className="underline hover:text-blue-900 dark:hover:text-white font-bold"
-        >
-         Auto-Fill
-        </button>
-       </div>
-
        <button
         type="submit"
         className="w-full py-3.5 px-4 rounded-full ts-btn-primary text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
