@@ -29,6 +29,74 @@ export function HeroSection() {
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-[#2E9BFF]/15 blur-[130px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 bg-corporate-grid opacity-30 pointer-events-none" />
 
+      {/* Abstract flowing shapes — card-colour edition */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <svg
+          className="absolute -right-48 top-0 h-full w-[950px] opacity-70"
+          viewBox="0 0 950 900"
+          fill="none"
+          preserveAspectRatio="xMaxYMid slice"
+        >
+          <defs>
+            <linearGradient id="tsFlowA" x1="0" y1="0" x2="950" y2="900" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#2E9BFF" stopOpacity="0.4" />
+              <stop offset="55%" stopColor="#1E6FE8" stopOpacity="0.16" />
+              <stop offset="100%" stopColor="#38E1FF" stopOpacity="0.04" />
+            </linearGradient>
+            <linearGradient id="tsFlowB" x1="950" y1="0" x2="0" y2="900" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#38E1FF" stopOpacity="0.28" />
+              <stop offset="100%" stopColor="#2E9BFF" stopOpacity="0.03" />
+            </linearGradient>
+            <linearGradient id="tsFlowC" x1="0" y1="900" x2="950" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#1668DC" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#2E9BFF" stopOpacity="0.05" />
+            </linearGradient>
+            <filter id="tsFlowBlur" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="38" />
+            </filter>
+          </defs>
+          <g filter="url(#tsFlowBlur)">
+            <path
+              d="M950 60 C 780 140, 820 330, 640 430 S 420 640, 540 900 L 950 900 Z"
+              fill="url(#tsFlowA)"
+            />
+            <path
+              d="M950 240 C 830 320, 860 470, 720 560 S 560 740, 660 900 L 950 900 Z"
+              fill="url(#tsFlowB)"
+            />
+            <path
+              d="M700 0 C 640 120, 700 240, 600 330 S 480 520, 560 700 L 950 700 L 950 0 Z"
+              fill="url(#tsFlowC)"
+              opacity="0.7"
+            />
+          </g>
+          <g opacity="0.5">
+            <path
+              d="M950 120 C 800 200, 830 360, 670 450"
+              stroke="#7DBCFF"
+              strokeOpacity="0.5"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M950 300 C 840 370, 860 500, 730 580"
+              stroke="#38E1FF"
+              strokeOpacity="0.4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M880 40 C 800 120, 820 230, 730 300"
+              stroke="#9CC8FF"
+              strokeOpacity="0.35"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+          </g>
+        </svg>
+        <div className="absolute -left-32 bottom-0 w-[520px] h-[520px] bg-[#1668DC]/12 blur-[120px] rounded-full" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Executive Value Proposition */}
