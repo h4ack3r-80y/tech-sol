@@ -499,7 +499,7 @@ export const siteConfig = {
         "ESC/POS Thermal Driver",
         "Local Ledger Encryption",
       ],
-      imagePlaceholder: "/images/projects/ihs/ihs-es-overview.png",
+      imagePlaceholder: "/images/projects/ihs/ihs-es-overview.jpg",
       statusBadge: "Verified Production System",
       featured: true,
     },
