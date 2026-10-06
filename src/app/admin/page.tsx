@@ -237,7 +237,7 @@ export default function AdminPage() {
 
        <button
         type="submit"
-        className="w-full py-3.5 px-4 rounded-xl ts-btn-primary text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+        className="w-full py-3.5 px-4 rounded-full ts-btn-primary text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
        >
         <KeyRound className="w-4 h-4" />
         <span>Sign In to Admin Portal</span>
@@ -541,7 +541,7 @@ export default function AdminPage() {
         <div className="pt-4 border-t border-slate-200 dark:border-[#1C2C4E] flex justify-end">
          <button
           onClick={() => showNotify("LedgerPro settings saved successfully!")}
-          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
          >
           <Save className="w-4 h-4" />
           <span>Save Changes</span>
@@ -578,7 +578,7 @@ export default function AdminPage() {
            });
            setIsAddingService(true);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl ts-btn-primary text-white text-xs font-bold shadow-md transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full ts-btn-primary text-white text-xs font-bold shadow-md transition-colors"
          >
           <Plus className="w-4 h-4" />
           <span>Add New Service</span>
@@ -908,7 +908,7 @@ export default function AdminPage() {
            });
            setIsAddingProject(true);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl ts-btn-primary text-white text-xs font-bold shadow-md transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full ts-btn-primary text-white text-xs font-bold shadow-md transition-colors"
          >
           <Plus className="w-4 h-4" />
           <span>Add New Project</span>
@@ -1084,7 +1084,7 @@ export default function AdminPage() {
            setNewFaq({ question: "", answer: "" });
            setIsAddingFaq(true);
           }}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl ts-btn-primary text-white text-xs font-bold shadow-md transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full ts-btn-primary text-white text-xs font-bold shadow-md transition-colors"
          >
           <Plus className="w-4 h-4" />
           <span>Add New FAQ</span>
@@ -1339,7 +1339,7 @@ export default function AdminPage() {
           updateAdminProfile(profileForm);
           showNotify("Admin profile updated successfully");
          }}
-         className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
+         className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
         >
          <Save className="w-4 h-4" />
          <span>Save Profile</span>
@@ -1554,7 +1554,7 @@ export default function AdminPage() {
        <button
         type="button"
         onClick={() => showNotify("Site settings updated successfully")}
-        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
+        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
        >
         <Save className="w-4 h-4" />
         <span>Save Settings</span>
@@ -1617,7 +1617,7 @@ export default function AdminPage() {
            exportConfigJson();
            showNotify("Configuration exported successfully");
           }}
-          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full ts-btn-primary text-white font-bold text-xs shadow-md transition-colors"
          >
           <Download className="w-4 h-4" />
           <span>Download JSON Backup</span>

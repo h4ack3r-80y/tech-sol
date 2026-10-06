@@ -70,7 +70,7 @@ export function HeroSection() {
             <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <Link
                 href="/request-a-quote"
-                className="ts-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-white font-semibold text-sm tracking-tight"
+                className="ts-btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-white font-semibold text-sm tracking-tight"
               >
                 <span>Request a Quote</span>
                 <ArrowRight className="w-4 h-4" />
@@ -78,7 +78,7 @@ export function HeroSection() {
 
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-[#0D1830]/70 hover:bg-slate-100 dark:hover:bg-[#12203A] border border-slate-200 dark:border-[#24365C] transition-all text-sm font-semibold shadow-sm"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-slate-700 dark:text-slate-200 bg-white dark:bg-[#0D1830]/70 hover:bg-slate-100 dark:hover:bg-[#12203A] border border-slate-200 dark:border-[#24365C] transition-all text-sm font-semibold shadow-sm"
               >
                 <ShieldCheck className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 <span>Explore Verified Projects</span>

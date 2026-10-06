@@ -208,7 +208,7 @@ export default function BookConsultationPage() {
        <div className="pt-2">
         <button
          type="submit"
-         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl ts-btn-primary text-white font-semibold text-sm transition-all shadow-sm"
+         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full ts-btn-primary text-white font-semibold text-sm transition-all shadow-sm"
         >
          <Calendar className="w-4 h-4" />
          <span>Confirm Consultation Request ↗</span>

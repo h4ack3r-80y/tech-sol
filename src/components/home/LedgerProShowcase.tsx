@@ -124,7 +124,7 @@ export function LedgerProShowcase() {
           href={ledgerPro.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white ts-btn-primary shadow-md transition-all hover:scale-[1.01]"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold text-white ts-btn-primary shadow-md transition-all hover:scale-[1.01]"
          >
           <span>Launch LedgerPro (www.ledgerprosolution.com)</span>
           <ExternalLink className="w-4 h-4" />

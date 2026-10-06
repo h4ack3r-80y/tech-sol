@@ -206,7 +206,7 @@ export function ProjectsDirectory({ projects }: ProjectsDirectoryProps) {
         <div className="pt-6 border-t border-slate-200 dark:border-[#1C2C4E] flex flex-wrap items-center gap-4">
          <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl ts-btn-primary text-white text-sm font-semibold transition-all shadow-sm hover:shadow-md"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full ts-btn-primary text-white text-sm font-semibold transition-all shadow-sm hover:shadow-md"
          >
           <span>View Case Study Architecture</span>
           <ArrowRight className="w-4 h-4" />

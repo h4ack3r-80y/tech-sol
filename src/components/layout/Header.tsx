@@ -24,9 +24,9 @@ export function Header() {
   const ledgerProUrl = config.ledgerPro?.url || "https://www.ledgerprosolution.com";
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-[#04070E]/92 backdrop-blur-md border-b border-slate-200 dark:border-[#1C2C4E]/80 shadow-[0_1px_28px_rgba(46,155,255,0.07)] transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+    <header className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6">
+      <div className="max-w-7xl mx-auto rounded-full bg-white/90 dark:bg-[#0A1226]/90 backdrop-blur-xl border border-slate-200 dark:border-[#1C2C4E] shadow-[0_10px_36px_-10px_rgba(46,155,255,0.22)] px-4 sm:px-5 transition-colors">
+        <div className="flex items-center justify-between h-16">
           {/* Logo & Brand Identity */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-10 h-10 flex-shrink-0 rounded-xl overflow-hidden bg-slate-900 border border-blue-500/40 shadow-[0_0_18px_rgba(46,155,255,0.45)] transition-transform group-hover:scale-105">
@@ -121,7 +121,7 @@ export function Header() {
               href={ledgerProUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center gap-2 px-3.5 py-1.5 mx-1 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:via-indigo-500 hover:to-blue-600 shadow-sm shadow-blue-500/30 hover:shadow-md hover:shadow-blue-500/40 border border-white/20 dark:border-blue-400/40 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap group"
+              className="relative inline-flex items-center gap-2 px-3.5 py-1.5 mx-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:via-indigo-500 hover:to-blue-600 shadow-sm shadow-blue-500/30 hover:shadow-md hover:shadow-blue-500/40 border border-white/20 dark:border-blue-400/40 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap group"
               title="LedgerPro Solution - Online Business Registration & Cloud Management"
             >
               <span className="flex items-center justify-center w-5 h-5 rounded-lg bg-white/20 backdrop-blur-xs text-amber-300 group-hover:rotate-12 transition-transform">
@@ -160,7 +160,7 @@ export function Header() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 border border-emerald-200 dark:border-emerald-500/30 rounded-xl transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 border border-emerald-200 dark:border-emerald-500/30 rounded-full transition-colors"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
               <span>WhatsApp</span>
@@ -169,7 +169,7 @@ export function Header() {
             {/* Corporate Blue Button */}
             <Link
               href="/request-a-quote"
-              className="ts-btn-primary inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 text-xs font-semibold text-white rounded-xl transition-all hover:scale-[1.01]"
+              className="ts-btn-primary inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 text-xs font-semibold text-white rounded-full transition-all hover:scale-[1.01]"
             >
               <span>Request a Quote</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -195,7 +195,7 @@ export function Header() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-[#12203A] border border-emerald-200 dark:border-emerald-500/20 rounded-xl transition-colors min-h-[40px] flex items-center justify-center"
+              className="p-2 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-[#12203A] border border-emerald-200 dark:border-emerald-500/20 rounded-full transition-colors min-h-[40px] flex items-center justify-center"
               aria-label="Chat on WhatsApp"
             >
               <MessageSquare className="w-5 h-5" />
@@ -204,7 +204,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-[#12203A] border border-slate-200 dark:border-[#1C2C4E] rounded-xl transition-colors min-h-[40px] flex items-center justify-center"
+              className="p-2 text-slate-800 dark:text-white hover:bg-slate-100 dark:hover:bg-[#12203A] border border-slate-200 dark:border-[#1C2C4E] rounded-full transition-colors min-h-[40px] flex items-center justify-center"
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -220,7 +220,7 @@ export function Header() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 dark:border-[#1C2C4E] bg-white/98 dark:bg-[#04070E]/98 backdrop-blur-xl px-4 pt-3 pb-8 space-y-3 shadow-2xl animate-in slide-in-from-top-3">
+        <div className="lg:hidden mt-2 max-w-7xl mx-auto rounded-3xl border border-slate-200 dark:border-[#1C2C4E] bg-white/95 dark:bg-[#0A1226]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 shadow-2xl animate-in slide-in-from-top-3">
           {/* LedgerPro Solution Mobile Link (Clean & Professional) */}
           <a
             href={ledgerProUrl}
@@ -311,7 +311,7 @@ export function Header() {
             <Link
               href="/request-a-quote"
               onClick={() => setMobileMenuOpen(false)}
-              className="ts-btn-primary w-full inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl text-sm font-semibold text-white transition-all shadow-sm"
+              className="ts-btn-primary w-full inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-full text-sm font-semibold text-white transition-all shadow-sm"
             >
               <span>Request a Quote</span>
               <ArrowRight className="w-4 h-4" />

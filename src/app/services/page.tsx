@@ -93,7 +93,7 @@ export default function ServicesPage() {
           <div className="pt-4 border-t border-slate-200 dark:border-[#1C2C4E] flex flex-col gap-2.5">
            <Link
             href={`/services/${service.slug}`}
-            className="w-full text-center py-3 px-4 rounded-xl ts-btn-primary text-white font-semibold text-xs transition-all shadow-sm"
+            className="w-full text-center py-3 px-4 rounded-full ts-btn-primary text-white font-semibold text-xs transition-all shadow-sm"
            >
             Detailed Specification ↗
            </Link>

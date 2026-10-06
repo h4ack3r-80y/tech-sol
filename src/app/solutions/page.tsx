@@ -80,7 +80,7 @@ export default function SolutionsPage() {
           <div className="pt-4 border-t border-slate-200 dark:border-[#1C2C4E] flex flex-wrap items-center gap-4">
            <Link
             href="/request-a-quote"
-            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl ts-btn-primary text-white text-xs font-semibold transition-all shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full ts-btn-primary text-white text-xs font-semibold transition-all shadow-sm"
            >
             <span>Start a {cat.name} Project</span>
             <ArrowRight className="w-3.5 h-3.5" />

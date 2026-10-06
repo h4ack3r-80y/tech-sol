@@ -48,7 +48,7 @@ export default function PosErpPage() {
      <div className="mt-8 pt-6 border-t border-slate-200 dark:border-[#1C2C4E] flex flex-wrap items-center gap-4">
       <Link
        href="/request-a-quote"
-       className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl ts-btn-primary text-white text-sm font-semibold transition-all shadow-sm"
+       className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full ts-btn-primary text-white text-sm font-semibold transition-all shadow-sm"
       >
        <span>{service.ctaText}</span>
        <ArrowRight className="w-4 h-4" />

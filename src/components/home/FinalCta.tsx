@@ -26,7 +26,7 @@ export function FinalCta() {
     <div className="flex flex-wrap items-center justify-center gap-4">
      <Link
       href="/request-a-quote"
-      className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl ts-btn-primary text-white font-semibold text-sm tracking-tight transition-all shadow-md hover:scale-[1.01]"
+      className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full ts-btn-primary text-white font-semibold text-sm tracking-tight transition-all shadow-md hover:scale-[1.01]"
      >
       <span>Request a Quote</span>
       <ArrowRight className="w-4 h-4" />

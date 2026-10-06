@@ -278,7 +278,7 @@ export function ContactForm() {
    <button
     type="submit"
     disabled={isSubmitting}
-    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl ts-btn-primary text-white font-semibold text-sm transition-all shadow-md hover:scale-[1.01] disabled:opacity-50"
+    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full ts-btn-primary text-white font-semibold text-sm transition-all shadow-md hover:scale-[1.01] disabled:opacity-50"
    >
     <Send className="w-4 h-4" />
     <span>{isSubmitting ? "Submitting..." : "Send Project Request"}</span>

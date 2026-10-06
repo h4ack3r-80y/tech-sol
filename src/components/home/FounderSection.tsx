@@ -189,7 +189,7 @@ export function FounderSection() {
         <div className="pt-6 mt-6 border-t border-slate-100 dark:border-[#1C2C4E]/80 flex flex-wrap items-center gap-3">
          <Link
           href="/book-a-consultation"
-          className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl ts-btn-primary text-white text-xs font-semibold transition-all shadow-sm hover:scale-[1.01]"
+          className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full ts-btn-primary text-white text-xs font-semibold transition-all shadow-sm hover:scale-[1.01]"
          >
           <span>{isCyberLead ? "Consult on Security & Architecture" : "Discuss AI & Intelligent Systems"}</span>
           <ArrowRight className="w-3.5 h-3.5" />

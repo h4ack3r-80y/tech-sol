@@ -189,7 +189,7 @@ export function FeaturedProjects() {
          <div className="pt-6 border-t border-slate-100 dark:border-[#1C2C4E] flex flex-wrap items-center gap-4">
           <Link
            href={`/projects/${project.slug}`}
-           className="inline-flex items-center gap-1.5 px-6 py-3 rounded-xl ts-btn-primary text-white text-xs font-semibold shadow-md transition-all hover:scale-[1.01]"
+           className="inline-flex items-center gap-1.5 px-6 py-3 rounded-full ts-btn-primary text-white text-xs font-semibold shadow-md transition-all hover:scale-[1.01]"
           >
            <span>Read Full Case Study</span>
            <ArrowRight className="w-3.5 h-3.5" />

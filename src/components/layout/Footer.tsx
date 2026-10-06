@@ -51,7 +51,7 @@ export function Footer() {
             </a>
             <Link
               href="/request-a-quote"
-              className="ts-btn-primary inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-white text-xs font-semibold transition-all hover:scale-[1.01]"
+              className="ts-btn-primary inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-white text-xs font-semibold transition-all hover:scale-[1.01]"
             >
               <span>Request a Quote</span>
               <ArrowRight className="w-3.5 h-3.5" />
