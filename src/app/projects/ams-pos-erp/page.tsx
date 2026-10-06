@@ -136,21 +136,94 @@ export default function AmsCaseStudyPage() {
             </ul>
           </section>
 
-          {/* System Showcase Diagram */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">System Architecture &amp; Interface</h2>
-            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 aspect-[16/10] max-w-3xl mx-auto shadow-sm">
-              <Image
-                src={project.imagePlaceholder}
-                alt="AMS POS/ERP Superstore System Showcase"
-                width={800}
-                height={500}
-                className="w-full h-full object-cover"
-              />
+          {/* System Showcase Gallery */}
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm overflow-hidden">
+            <div className="flex items-center justify-between flex-wrap gap-3 mb-2">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">System Architecture &amp; Interface</h2>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                LIVE PRODUCTION SYSTEM
+              </span>
             </div>
-            <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 mt-3">
-              Production architectural model. Sensitive commercial customer data is anonymized.
+            <p className="text-sm text-slate-600 dark:text-slate-300 mb-5 leading-relaxed">
+              Real interface captures from the deployed superstore system — commercial data anonymized for privacy.
             </p>
+            <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+              <div className="overflow-hidden">
+                <Image
+                  src="/images/projects/ams/ams-live-dashboard.png"
+                  alt="AMS Superstore live dashboard with sales, Khata and profit analytics"
+                  width={1920}
+                  height={1034}
+                  className="w-full h-auto group-hover:scale-[1.015] transition-transform duration-500"
+                  priority
+                />
+              </div>
+              <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                Live dashboard — today&apos;s sales, cash intake, receivables (Udhar) &amp; P&amp;L trends
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ams/ams-live-sale-invoice.png"
+                    alt="AMS live sale invoice screen with barcode search and payment channels"
+                    width={1918}
+                    height={1016}
+                    className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Sale invoice — barcode search, cash/Khata channels &amp; instant billing
+                </p>
+              </div>
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ams/ams-live-customer360.png"
+                    alt="AMS live Customer 360 with Khata ledger, sales and payment history"
+                    width={1919}
+                    height={1033}
+                    className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Customer 360 — Khata ledger, sales history &amp; WhatsApp receipts
+                </p>
+              </div>
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ams/ams-live-profit-loss.png"
+                    alt="AMS live profit and loss analytics with revenue vs cost breakdown"
+                    width={1920}
+                    height={1022}
+                    className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Profit &amp; loss — revenue vs cost, margins &amp; loss analysis
+                </p>
+              </div>
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ams/ams-live-settings.png"
+                    alt="AMS store configuration with business branding and bank accounts"
+                    width={1920}
+                    height={1034}
+                    className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Store configuration — branding, contacts &amp; bank accounts on bills
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* Technology Stack Tags */}

@@ -29,7 +29,9 @@ export default function IhsCaseStudyPage() {
         </nav>
 
         {/* Case Study Header Hero */}
-        <div className="rounded-3xl p-8 sm:p-12 mb-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
+        <div className="rounded-3xl p-8 sm:p-12 mb-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-400" />
+          <div className="absolute -top-24 -right-24 w-72 h-72 bg-blue-500/10 dark:bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 text-xs font-mono font-bold uppercase tracking-wider border border-blue-200 dark:border-blue-800">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
@@ -74,7 +76,7 @@ export default function IhsCaseStudyPage() {
             {project.metrics.map((metric, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm text-center"
+                className="rounded-2xl p-5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm text-center hover:shadow-lg hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300"
               >
                 <div className="text-2xl sm:text-3xl font-extrabold font-mono text-blue-600 dark:text-blue-400">
                   {metric.value}
@@ -137,50 +139,115 @@ export default function IhsCaseStudyPage() {
           </section>
 
           {/* System Showcase Gallery */}
-          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">System Architecture &amp; Interface</h2>
-            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm">
+          <section className="rounded-2xl p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0D1527] shadow-sm overflow-hidden">
+            <div className="flex items-center justify-between flex-wrap gap-3 mb-6">
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">System Architecture &amp; Interface</h2>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                LIVE PRODUCTION SYSTEM
+              </span>
+            </div>
+
+            {/* Concept visualizations */}
+            <p className="text-xs font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Concept Visualizations</p>
+            <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
               <Image
                 src="/images/projects/ihs/ihs-es-overview.png"
                 alt="IHS E&S Electronics & Solar POS ERP Suite overview"
                 width={972}
                 height={596}
-                className="w-full h-auto"
+                className="w-full h-auto group-hover:scale-[1.015] transition-transform duration-500"
                 priority
               />
             </div>
             <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 mt-3 mb-6">
-              IHS E&S — Electronics &amp; Solar POS ERP Suite. 100% offline-first with Khata ledger sync.
+              IHS E&amp;S — Electronics &amp; Solar POS ERP Suite. 100% offline-first with Khata ledger sync.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm">
-                <Image
-                  src="/images/projects/ihs/ihs-es-pos-counter.png"
-                  alt="IHS E&S counter sales terminal with dual discount and receipt printing"
-                  width={1460}
-                  height={257}
-                  className="w-full h-auto"
-                />
-                <p className="text-center text-xs font-mono text-slate-400 dark:text-slate-400 mt-0 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ihs/ihs-es-pos-counter.png"
+                    alt="IHS E&S counter sales terminal with dual discount and receipt printing"
+                    width={1460}
+                    height={257}
+                    className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
                   Counter terminal — dual discount, loss-guarding &amp; instant Khata sync
                 </p>
               </div>
-              <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm">
-                <Image
-                  src="/images/projects/ihs/ihs-es-inventory-suite.png"
-                  alt="IHS E&S solar inventory, multi-godown stock and financial P&L suite"
-                  width={1094}
-                  height={552}
-                  className="w-full h-auto"
-                />
-                <p className="text-center text-xs font-mono text-slate-400 dark:text-slate-400 mt-0 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-blue-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ihs/ihs-es-inventory-suite.png"
+                    alt="IHS E&S solar inventory, multi-godown stock and financial P&L suite"
+                    width={1094}
+                    height={552}
+                    className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
                   Inventory, multi-godown stock valuation &amp; financial P&amp;L suite
                 </p>
               </div>
             </div>
-            <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 mt-4">
-              Production interface mockups. Sensitive commercial customer data is anonymized.
-            </p>
+
+            {/* Live production screenshots */}
+            <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
+              <p className="text-xs font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">Live Production Screenshots</p>
+              <p className="text-sm text-slate-600 dark:text-slate-300 mb-5 leading-relaxed">
+                Real interface captures from the deployed system running at the client site — commercial data anonymized for privacy.
+              </p>
+              <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                <div className="overflow-hidden">
+                  <Image
+                    src="/images/projects/ihs/ihs-live-dashboard.png"
+                    alt="IHS E&S live production dashboard with sales, Khata and stock valuation"
+                    width={1920}
+                    height={1019}
+                    className="w-full h-auto group-hover:scale-[1.015] transition-transform duration-500"
+                  />
+                </div>
+                <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                  Live dashboard — today&apos;s sales, cash intake, receivables (Udhar) &amp; stock valuation
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                  <div className="overflow-hidden">
+                    <Image
+                      src="/images/projects/ihs/ihs-live-invoices.png"
+                      alt="IHS E&S live invoices and documents history with payment tracking"
+                      width={1920}
+                      height={1030}
+                      className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                    />
+                  </div>
+                  <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                    Invoices history — sale value, profit earned &amp; payment recovery
+                  </p>
+                </div>
+                <div className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-slate-900 shadow-sm hover:shadow-xl hover:border-emerald-400/60 transition-all duration-300">
+                  <div className="overflow-hidden">
+                    <Image
+                      src="/images/projects/ihs/ihs-live-customer360.png"
+                      alt="IHS E&S live Customer 360 view with Khata ledger statements"
+                      width={1920}
+                      height={1024}
+                      className="w-full h-auto group-hover:scale-[1.03] transition-transform duration-500"
+                    />
+                  </div>
+                  <p className="text-center text-xs font-mono text-slate-500 dark:text-slate-400 px-4 py-3 bg-white dark:bg-[#0D1527] border-t border-slate-200 dark:border-slate-700/60">
+                    Customer 360 — Khata ledger, sales &amp; payment history per customer
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Technology Stack Tags */}

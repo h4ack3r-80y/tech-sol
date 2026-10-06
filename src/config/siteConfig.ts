@@ -544,7 +544,7 @@ export const siteConfig = {
         "Loose Weight Weighing Scale Protocol",
         "Automated Backup Engine",
       ],
-      imagePlaceholder: "/images/projects/ams-pos-placeholder.svg",
+      imagePlaceholder: "/images/projects/ams/ams-live-dashboard.png",
       statusBadge: "Verified Production System",
       featured: true,
     },
