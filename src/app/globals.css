@@ -293,6 +293,25 @@
   animation: float-gentle 4s ease-in-out infinite;
 }
 
+/* Flowing tech lines — dashes stream horizontally like data flow */
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -180;
+  }
+}
+
+.animate-flow-lines {
+  animation: flow-dash 2.8s linear infinite;
+}
+
+.animate-flow-lines-slow {
+  animation: flow-dash 4.6s linear infinite;
+}
+
+.animate-flow-lines-slower {
+  animation: flow-dash 6.8s linear infinite;
+}
+
 /* Premium Gradient Border Glow */
 @keyframes glow-border {
   0%, 100% {
