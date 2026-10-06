@@ -109,21 +109,6 @@ export function Header() {
               Projects
             </Link>
 
-            {/* Flagship LedgerPro Cloud SaaS Button (Ultra Premium Button) */}
-            <a
-              href={ledgerProUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative inline-flex items-center gap-2 px-3.5 py-1.5 mx-1 rounded-full text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:via-indigo-500 hover:to-blue-600 shadow-sm shadow-blue-500/30 hover:shadow-md hover:shadow-blue-500/40 border border-white/20 dark:border-blue-400/40 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap group"
-              title="LedgerPro Solution - Online Business Registration & Cloud Management"
-            >
-              <span className="tracking-tight font-extrabold text-[13px] text-white">LedgerPro</span>
-              <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold uppercase tracking-wider bg-white/20 text-white border border-white/25">
-                SaaS
-              </span>
-              <ExternalLink className="w-3 h-3 text-blue-200 group-hover:translate-x-0.5 group-hover:text-white transition-all" />
-            </a>
-
             <Link
               href="/about"
               className="px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors rounded-lg"

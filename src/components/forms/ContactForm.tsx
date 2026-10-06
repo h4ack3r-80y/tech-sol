@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { siteConfig } from "@/config/siteConfig";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { CountrySelect } from "./CountrySelect";
+import { findCountryByCode, type Country } from "@/data/countries";
 
 export function ContactForm() {
  const [formData, setFormData] = useState({
@@ -23,6 +25,36 @@ export function ContactForm() {
  const [submitted, setSubmitted] = useState(false);
  const [errorMsg, setErrorMsg] = useState("");
  const [isSubmitting, setIsSubmitting] = useState(false);
+ const [selectedCountry, setSelectedCountry] = useState<Country>(() => findCountryByCode("PK"));
+ const [dialCountry, setDialCountry] = useState<Country>(() => findCountryByCode("PK"));
+
+ const handleCountryChange = (c: Country) => {
+  setSelectedCountry(c);
+  // Keep the phone dialing code in sync with the chosen country
+  setDialCountry(c);
+  setFormData((prev) => ({ ...prev, country: c.name }));
+ };
+
+ const resetForm = () => {
+  setSubmitted(false);
+  const pk = findCountryByCode("PK");
+  setSelectedCountry(pk);
+  setDialCountry(pk);
+  setFormData({
+   name: "",
+   company: "",
+   email: "",
+   phone: "",
+   country: "Pakistan",
+   serviceNeeded: "POS/ERP Development",
+   projectType: "New System Development",
+   budgetRange: "",
+   timeline: "",
+   description: "",
+   preferredContact: "WhatsApp",
+   honeypot: "",
+  });
+ };
 
  const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
@@ -71,23 +103,7 @@ export function ContactForm() {
     <div className="pt-2">
      <button
       type="button"
-      onClick={() => {
-       setSubmitted(false);
-       setFormData({
-        name: "",
-        company: "",
-        email: "",
-        phone: "",
-        country: "Pakistan",
-        serviceNeeded: "POS/ERP Development",
-        projectType: "New System Development",
-        budgetRange: "",
-        timeline: "",
-        description: "",
-        preferredContact: "WhatsApp",
-        honeypot: "",
-       });
-      }}
+      onClick={resetForm}
       className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
      >
       Send another message &rarr;
@@ -167,14 +183,17 @@ export function ContactForm() {
      <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
       Phone / WhatsApp <span className="text-blue-600 dark:text-blue-400">*</span>
      </label>
-     <input
-      type="tel"
-      required
-      placeholder="+92 300 1234567"
-      value={formData.phone}
-      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-      className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-[#24365C] bg-white dark:bg-[#070D1C] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-sm focus:border-blue-600 dark:focus:border-blue-500 focus:ring-1 focus:ring-blue-600 transition-all outline-none shadow-sm"
-     />
+     <div className="flex gap-2">
+      <CountrySelect mode="dial" value={dialCountry} onChange={setDialCountry} id="phone_dial" />
+      <input
+       type="tel"
+       required
+       placeholder="300 1234567"
+       value={formData.phone}
+       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+       className="flex-1 min-w-0 px-4 py-3 rounded-xl border border-slate-300 dark:border-[#24365C] bg-white dark:bg-[#070D1C] text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-sm focus:border-blue-600 dark:focus:border-blue-500 focus:ring-1 focus:ring-blue-600 transition-all outline-none shadow-sm"
+      />
+     </div>
     </div>
    </div>
 
@@ -183,13 +202,7 @@ export function ContactForm() {
      <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
       Country <span className="text-blue-600 dark:text-blue-400">*</span>
      </label>
-     <input
-      type="text"
-      required
-      value={formData.country}
-      onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-      className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-[#24365C] bg-white dark:bg-[#070D1C] text-slate-900 dark:text-white text-sm focus:border-blue-600 dark:focus:border-blue-500 focus:ring-1 focus:ring-blue-600 transition-all outline-none shadow-sm"
-     />
+     <CountrySelect mode="country" value={selectedCountry} onChange={handleCountryChange} id="country_select" />
     </div>
 
     <div>

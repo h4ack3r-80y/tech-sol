@@ -8,7 +8,7 @@ export function LedgerProButton() {
   const href = siteConfig.ledgerPro?.url || "https://www.ledgerprosolution.com";
 
   return (
-    <aside aria-label="LedgerPro quick launch" className="fixed bottom-6 left-6 z-40">
+    <aside aria-label="LedgerPro quick launch" className="fixed bottom-24 right-6 z-40">
       <a
         href={href}
         target="_blank"
