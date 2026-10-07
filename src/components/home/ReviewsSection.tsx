@@ -167,8 +167,16 @@ export function ReviewsSection() {
     }
   };
 
+  const avgRating =
+    reviews.length > 0
+      ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
+      : 0;
+
   return (
-    <section className="relative overflow-hidden bg-slate-50 dark:bg-[#04070E] py-16 lg:py-24 border-b border-slate-200 dark:border-[#1C2C4E] transition-colors">
+    <section
+      id="reviews"
+      className="relative overflow-hidden bg-slate-50 dark:bg-[#04070E] py-16 lg:py-24 border-b border-slate-200 dark:border-[#1C2C4E] transition-colors scroll-mt-20"
+    >
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-[#2E9BFF]/10 blur-[130px] rounded-full pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
@@ -183,6 +191,17 @@ export function ReviewsSection() {
             Real reviews from businesses we&apos;ve worked with. Worked with TechSol? Share
             your experience below — it appears here instantly.
           </p>
+          {!loading && reviews.length > 0 && (
+            <div className="mt-4 inline-flex items-center gap-2.5 rounded-full border border-slate-200 dark:border-[#24365C] bg-white dark:bg-[#0A1120] px-4 py-2 shadow-sm">
+              <Stars value={Math.round(avgRating)} size={18} />
+              <span className="text-sm font-semibold text-slate-900 dark:text-white">
+                {avgRating.toFixed(1)} out of 5
+              </span>
+              <span className="text-xs text-slate-500 dark:text-slate-400">
+                · {reviews.length} review{reviews.length > 1 ? "s" : ""}
+              </span>
+            </div>
+          )}
         </div>
 
         {success && (

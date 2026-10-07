@@ -110,6 +110,13 @@ export function Header() {
             </Link>
 
             <Link
+              href="/#reviews"
+              className="px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors rounded-lg"
+            >
+              Reviews
+            </Link>
+
+            <Link
               href="/about"
               className="px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors rounded-lg"
             >
@@ -231,6 +238,13 @@ export function Header() {
               className="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-[#12203A]/60"
             >
               Projects
+            </Link>
+            <Link
+              href="/#reviews"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-[#12203A]/60"
+            >
+              Reviews
             </Link>
             <Link
               href="/process"
