@@ -1,4 +1,4 @@
-import { createClient } from "@vercel/kv";
+import { list, put } from "@vercel/blob";
 
 export interface Review {
   id: string;
@@ -10,55 +10,52 @@ export interface Review {
   createdAt: string;
 }
 
-type KvClient = ReturnType<typeof createClient>;
-
-const REVIEWS_KEY = "techsol:reviews";
+// Reviews live in a single JSON blob (newest first). Blob was chosen over
+// Vercel KV because KV is deprecated and new KV stores can no longer be
+// created — a single Blob store now backs both the review list and logos.
+const REVIEWS_PATH = "reviews/reviews.json";
 const MAX_STORED = 200;
 
-let kvClient: KvClient | null | undefined;
-
-function getKv(): KvClient | null {
-  if (kvClient !== undefined) return kvClient;
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-  if (!url || !token) {
-    kvClient = null;
-    return null;
-  }
-  kvClient = createClient({ url, token });
-  return kvClient;
-}
-
-/** True when the Vercel KV store is connected (env vars present). */
+/** True when the Blob store is connected (token present). */
 export function isReviewsConfigured(): boolean {
-  return getKv() !== null;
+  return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
 }
 
 export function isBlobConfigured(): boolean {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
 }
 
+async function readAll(): Promise<Review[]> {
+  const { blobs } = await list({ prefix: REVIEWS_PATH, limit: 5 });
+  const match = blobs.find((b) => b.pathname === REVIEWS_PATH);
+  if (!match) return [];
+  const res = await fetch(match.url, { cache: "no-store" });
+  if (!res.ok) return [];
+  try {
+    const data: unknown = await res.json();
+    return Array.isArray(data) ? (data as Review[]) : [];
+  } catch {
+    return [];
+  }
+}
+
 /** Newest first. */
 export async function getReviews(limit = 50): Promise<Review[]> {
-  const kv = getKv();
-  if (!kv) return [];
-  const items = await kv.lrange<Review>(REVIEWS_KEY, 0, limit - 1);
-  return items ?? [];
+  if (!isReviewsConfigured()) return [];
+  try {
+    return (await readAll()).slice(0, limit);
+  } catch (e) {
+    console.error("reviews read failed", e);
+    return [];
+  }
 }
 
 export async function addReview(review: Review): Promise<void> {
-  const kv = getKv();
-  if (!kv) throw new Error("reviews-not-configured");
-  await kv.lpush(REVIEWS_KEY, review);
-  await kv.ltrim(REVIEWS_KEY, 0, MAX_STORED - 1);
-}
-
-/** Simple per-IP throttle: max 5 submissions per hour. Returns true if allowed. */
-export async function checkRateLimit(ip: string): Promise<boolean> {
-  const kv = getKv();
-  if (!kv) return true;
-  const key = `techsol:reviews:rl:${ip}`;
-  const count = await kv.incr(key);
-  if (count === 1) await kv.expire(key, 3600);
-  return count <= 5;
+  if (!isReviewsConfigured()) throw new Error("reviews-not-configured");
+  const next = [review, ...(await readAll())].slice(0, MAX_STORED);
+  await put(REVIEWS_PATH, JSON.stringify(next), {
+    access: "public",
+    contentType: "application/json",
+    addRandomSuffix: false,
+  });
 }

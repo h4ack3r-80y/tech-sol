@@ -3,7 +3,6 @@ import { put } from "@vercel/blob";
 import {
   getReviews,
   addReview,
-  checkRateLimit,
   isReviewsConfigured,
   isBlobConfigured,
   type Review,
@@ -34,19 +33,6 @@ export async function POST(req: NextRequest) {
       { error: "Reviews are not enabled yet. Please try again later." },
       { status: 503 }
     );
-  }
-
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  try {
-    if (!(await checkRateLimit(ip))) {
-      return NextResponse.json(
-        { error: "Too many submissions. Please try again later." },
-        { status: 429 }
-      );
-    }
-  } catch (e) {
-    console.error("reviews rate-limit failed", e);
   }
 
   let form: FormData;
